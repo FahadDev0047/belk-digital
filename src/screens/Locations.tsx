@@ -100,7 +100,7 @@ const Locations = () => {
   // City detail page
   if (locationSlug && cityToRegionMap[locationSlug] && t.locations.cityPages) {
     const regionKey = cityToRegionMap[locationSlug];
-    const content = t.locations.cityPages[regionKey];
+    const content = (t.locations.cityPages as any)[regionKey];
     const countryFlag = regions.find(r => r.slug === city || r.key === city)?.flag || '🌍';
 
     if (!content) return null;

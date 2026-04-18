@@ -33,10 +33,10 @@ export async function generateMetadata({
     const dict = await getDictionary(lang as Locale);
 
     const regionKey = cityToRegionMap[city];
-    const content = regionKey && dict.locations?.cityPages?.[regionKey];
+    const content = regionKey && (dict.locations?.cityPages as any)?.[regionKey];
 
     const title = content?.title
-        ? `${content.title} - CodeNovaX`
+        ? `${content.title} - Belk Digital`
         : dict.seo?.locations?.title || 'Global Service Locations';
     const description = content?.intro
         || dict.seo?.locations?.description
