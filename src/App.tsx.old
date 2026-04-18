@@ -1,0 +1,72 @@
+import { HelmetProvider } from 'react-helmet-async';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { LanguageProvider } from "@/i18n/LanguageContext";
+import { Layout } from "@/components/layout/Layout";
+import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { CustomScrollbar } from "@/components/ui/CustomScrollbar";
+import { SEO } from "@/components/SEO";
+import { RootRedirect } from "@/components/RootRedirect";
+import Index from "./pages/Index";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import Work from "./pages/Work";
+import FAQ from "./pages/FAQ";
+import Locations from "./pages/Locations";
+import Blog from "./pages/Blog";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import NotFound from "./pages/NotFound";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <HelmetProvider>
+      <LanguageProvider>
+        <SEO />
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+            <ScrollToTop />
+            <CustomScrollbar />
+            <SmoothScroll> {/* Wrapped Layout with SmoothScroll */}
+              <Layout>
+                <Routes>
+                  {/* Redirect root to default language */}
+                  <Route path="/" element={<RootRedirect />} />
+
+                  {/* Language-prefixed routes */}
+                  <Route path="/:lang" element={<Index />} />
+                  <Route path="/:lang/about" element={<About />} />
+                  <Route path="/:lang/services" element={<Services />} />
+                  <Route path="/:lang/services/:slug" element={<Services />} />
+                  <Route path="/:lang/work" element={<Work />} />
+                  <Route path="/:lang/contact" element={<Contact />} />
+                  <Route path="/:lang/faq" element={<FAQ />} />
+                  <Route path="/:lang/locations" element={<Locations />} />
+                  <Route path="/:lang/locations/:city" element={<Locations />} />
+                  <Route path="/:lang/blog" element={<Blog />} />
+                  <Route path="/:lang/blog/:slug" element={<Blog />} />
+                  <Route path="/:lang/privacy" element={<Privacy />} />
+                  <Route path="/:lang/terms" element={<Terms />} />
+
+                  {/* Catch-all */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Layout>
+            </SmoothScroll>
+          </BrowserRouter>
+        </TooltipProvider>
+      </LanguageProvider>
+    </HelmetProvider>
+  </QueryClientProvider>
+);
+
+export default App;

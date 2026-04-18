@@ -1,0 +1,97 @@
+import fs from 'fs';
+
+// 1. Update index.css
+let css = fs.readFileSync('src/index.css', 'utf8');
+
+const fonts = `@import "@fontsource/general-sans/400.css";
+@import "@fontsource/general-sans/500.css";
+@import "@fontsource/general-sans/600.css";
+@import "@fontsource/general-sans/700.css";
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+@import "@fontsource/geist-sans/700.css";
+`;
+
+if (!css.includes('@fontsource/geist-sans')) {
+  css = fonts + css;
+}
+
+const vars = `  :root {
+    --background: 260 87% 3%;
+    --foreground: 40 6% 95%;
+    --card: 240 6% 9%;
+    --card-foreground: 40 6% 95%;
+    --popover: 240 6% 9%;
+    --popover-foreground: 40 6% 95%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 40 6% 95%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 4% 20%;
+    --input: 240 4% 20%;
+    --ring: 262 83% 58%;
+    --radius: 0.75rem;
+    --hero-heading: 40 10% 96%;
+    --hero-sub: 40 6% 82%;
+  }`;
+
+css = css.replace(/  :root \{[\s\S]*?\}\s*\.dark \{[\s\S]*?\}/, vars);
+
+css = css.replace(/font-family: .+?;/, "font-family: 'Geist Sans', 'Inter', system-ui, sans-serif;");
+
+const liquidGlass = `
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(180deg,
+      rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+      rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+      rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+`;
+
+if (!css.includes('.liquid-glass')) {
+  css = css.replace(/(@layer utilities \{)/, '$1' + liquidGlass);
+}
+
+fs.writeFileSync('src/index.css', css);
+console.log('Updated src/index.css');
+
+// 2. Update tailwind.config.ts
+let tw = fs.readFileSync('tailwind.config.ts', 'utf8');
+
+if (!tw.includes('hero: {')) {
+  tw = tw.replace('colors: {', `colors: {\n        hero: {\n          heading: "hsl(var(--hero-heading))",\n          sub: "hsl(var(--hero-sub))",\n        },`);
+}
+tw = tw.replace(/"marquee": \{"0%": \{ transform: "translateX\(100\%\)" \},"100%": \{ transform: "translateX\(-100\%\)" \},/g, ''); // just in case
+tw = tw.replace(/"marquee": \{\s*"0%": \{ transform: "translateX\(100\%\)" \},\s*"100%": \{ transform: "translateX\(-100\%\)" \},\s*\}/g, `"marquee": { "0%": { transform: "translateX(0%)" }, "100%": { transform: "translateX(-50%)" } }`);
+
+tw = tw.replace(/"marquee": "marquee 25s linear infinite",/g, `"marquee": "marquee 20s linear infinite",`);
+
+fs.writeFileSync('tailwind.config.ts', tw);
+console.log('Updated tailwind.config.ts');
