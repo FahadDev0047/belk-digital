@@ -1333,12 +1333,6 @@ export const translations = {
         description2: 'By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you have any questions, please contact our legal team.'
       }
     },
-    whoWeAre: {
-      badge: 'WHO WE ARE?',
-      title: 'We are a global digital solutions company building high-performance websites, SaaS platforms, and scalable digital products that drive real business impact.',
-      aboutBtn: 'About CodeNovaX',
-      teamBtn: 'Meet the Team',
-    },
   },
   ar: {
     seo: {
@@ -5148,12 +5142,6 @@ export const translations = {
         description: 'Diese Allgemeinen Geschäftsbedingungen unterliegen den Gesetzen der Gerichtsbarkeit, in der CodeNovaX tätig ist, und werden nach diesen ausgelegt. Alle Streitigkeiten im Zusammenhang mit diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte dieser Gerichtsbarkeit.',
         description2: 'Durch die Nutzung unserer Dienste bestätigen Sie, dass Sie diese Allgemeinen Geschäftsbedingungen gelesen, verstanden und sich verpflichtet haben, an sie gebunden zu sein. Bei Fragen wenden Sie sich bitte an unser Rechtsteam.'
       }
-    },
-    whoWeAre: {
-      badge: 'WER SIND WIR?',
-      title: 'Wir sind ein globales Unternehmen für digitale Lösungen, das leistungsstarke Websites, SaaS-Plattformen und skalierbare digitale Produkte entwickelt, die echte geschäftliche Auswirkungen haben.',
-      aboutBtn: 'Über CodeNovaX',
-      teamBtn: 'Das Team treffen',
     },
   },
 };

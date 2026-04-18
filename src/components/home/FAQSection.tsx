@@ -61,7 +61,7 @@ export function FAQSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-4"
             >
-              {faqs.slice(0, 4).map((faq, index) => (
+              {faqs.slice(0, 4).map((faq: any, index: number) => (
                 <div
                   key={index}
                   className="bg-[#FEFCFF] dark:bg-[#25262b] rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all duration-300"

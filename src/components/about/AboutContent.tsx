@@ -50,13 +50,13 @@ export function AboutContent() {
     // Unique looping animations per icon index
     const iconAnimations = [
         // 0 — slow spin
-        { animate: { rotate: 360 }, transition: { duration: 8, repeat: Infinity, ease: 'linear' } },
+        { animate: { rotate: 360 }, transition: { duration: 8, repeat: Infinity, ease: 'linear' as const } },
         // 1 — pulse scale
-        { animate: { scale: [1, 1.18, 1] }, transition: { duration: 2, repeat: Infinity, ease: 'easeInOut' } },
+        { animate: { scale: [1, 1.18, 1] }, transition: { duration: 2, repeat: Infinity, ease: 'easeInOut' as const } },
         // 2 — bounce / vertical float
-        { animate: { y: [0, -8, 0] }, transition: { duration: 1.6, repeat: Infinity, ease: 'easeInOut' } },
+        { animate: { y: [0, -8, 0] }, transition: { duration: 1.6, repeat: Infinity, ease: 'easeInOut' as const } },
         // 3 — sway (left-right)
-        { animate: { rotate: [-8, 8, -8] }, transition: { duration: 2.4, repeat: Infinity, ease: 'easeInOut' } },
+        { animate: { rotate: [-8, 8, -8] }, transition: { duration: 2.4, repeat: Infinity, ease: 'easeInOut' as const } },
     ];
 
     return (

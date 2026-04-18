@@ -88,7 +88,7 @@ export function SocialProofSection() {
           <div className="relative flex overflow-hidden flex-1 w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <div className="flex shrink-0 animate-marquee gap-16 min-w-[200%] sm:min-w-full">
               {/* Duplicated for seamless scrolling */}
-              {[...brands, ...brands, ...brands, ...brands].map((brand, i) => (
+              {[...brands, ...brands, ...brands, ...brands].map((brand: any, i: number) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="liquid-glass w-6 h-6 rounded-lg flex items-center justify-center text-xs font-semibold text-foreground/80 shrink-0">
                     {brand.letter}

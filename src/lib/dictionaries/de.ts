@@ -1061,15 +1061,47 @@ whoWeAre: {
   teamBtn: 'Triff das Team',
 },
 footer: {
-  description: 'Wir schaffen außergewöhnliche digitale Erlebnisse, die Unternehmen helfen, in der modernen Welt erfolgreich zu sein.',
-  locations: 'Standorte',
-  contact: 'Kontakt',
-  email: 'E-Mail',
-  whatsapp: 'WhatsApp',
-  copyright: 'CodeNovaX. Alle Rechte vorbehalten.',
-  privacy: 'Datenschutzrichtlinie',
-  terms: 'Nutzungsbedingungen',
-},
+    description: 'Wir schaffen außergewöhnliche digitale Erlebnisse, die Unternehmen helfen, in der modernen Welt erfolgreich zu sein.',
+    branding: 'Belk Digital',
+    copyright: '© 2024 Belk Digital Industries. Alle Rechte vorbehalten.',
+    columns: {
+      pages: {
+        title: 'Seiten',
+        links: [
+          { label: 'Alle Produkte', href: '/products' },
+          { label: 'Studio', href: '/studio' },
+          { label: 'Kunden', href: '/clients' },
+          { label: 'Preise', href: '/pricing' },
+          { label: 'Blog', href: '/blog' }
+        ]
+      },
+      socials: {
+        title: 'Soziales',
+        links: [
+          { label: 'Facebook', href: 'https://facebook.com' },
+          { label: 'Instagram', href: 'https://instagram.com' },
+          { label: 'Twitter', href: 'https://twitter.com' },
+          { label: 'LinkedIn', href: 'https://linkedin.com' }
+        ]
+      },
+      legal: {
+        title: 'Rechtliches',
+        links: [
+          { label: 'Datenschutzerklärung', href: '/privacy' },
+          { label: 'Nutzungsbedingungen', href: '/terms' },
+          { label: 'Cookie-Richtlinie', href: '/cookie-policy' }
+        ]
+      },
+      register: {
+        title: 'Registrieren',
+        links: [
+          { label: 'Anmelden', href: '/signup' },
+          { label: 'Login', href: '/login' },
+          { label: 'Passwort vergessen', href: '/forgot-password' }
+        ]
+      }
+    }
+  },
 faqCategories: [
   {
     name: 'Preise',

@@ -60,7 +60,7 @@ export function JournalSection() {
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    {articles.map((article, index) => (
+                    {articles.map((article: any, index: number) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}

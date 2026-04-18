@@ -60,7 +60,7 @@ export default function WorldMap({
         viewBox="0 0 800 400"
         className="w-full h-full absolute inset-0 pointer-events-none select-none"
       >
-        {dots.map((dot, i) => {
+        {dots.map((dot: any, i: number) => {
           const startPoint = projectPoint(dot.start.lat, dot.start.lng);
           const endPoint = projectPoint(dot.end.lat, dot.end.lng);
           return (
@@ -96,7 +96,7 @@ export default function WorldMap({
           </linearGradient>
         </defs>
 
-        {dots.map((dot, i) => (
+        {dots.map((dot: any, i: number) => (
           <g key={`points-group-${i}`}>
             <g key={`start-${i}`}>
               <circle

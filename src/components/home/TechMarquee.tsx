@@ -35,7 +35,7 @@ export function TechMarquee() {
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{ ease: "linear", duration: 40, repeat: Infinity }}
                 >
-                    {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech, idx) => (
+                    {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech: any, idx: number) => (
                         <div
                             key={idx}
                             className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shrink-0 hover:scale-110 transition-all duration-300"

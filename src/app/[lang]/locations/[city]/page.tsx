@@ -37,9 +37,9 @@ export async function generateMetadata({
 
     const title = content?.title
         ? `${content.title} - Belk Digital`
-        : dict.seo?.locations?.title || 'Global Service Locations';
+        : (dict as any).seo?.locations?.title || 'Global Service Locations';
     const description = content?.intro
-        || dict.seo?.locations?.description
+        || (dict as any).seo?.locations?.description
         || 'Serving clients in the USA, Europe, GCC, and Australia.';
 
     return constructMetadata({

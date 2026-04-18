@@ -72,8 +72,8 @@ const Contact = () => {
       await Promise.all([
         // 1. Notification to Admin (You)
         emailjs.send(
-          'service_i74avx5',
-          'template_inls49j',
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN_ID!,
           {
             // Variables mapped for EmailJS template
             from_name: validated.name,
@@ -83,12 +83,12 @@ const Contact = () => {
             reply_to: validated.email,
             ...commonParams
           },
-          '_qYm8titBjWVHUXBu'
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
         ),
         // 2. Auto-reply to User
         emailjs.send(
-          'service_i74avx5',
-          'template_c6rphqs',
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_USER_ID!,
           {
             // Variables for Auto-reply Template
             to_name: validated.name,
@@ -98,7 +98,7 @@ const Contact = () => {
             email: validated.email,
             ...commonParams
           },
-          '_qYm8titBjWVHUXBu'
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
         )
       ]);
 

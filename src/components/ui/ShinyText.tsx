@@ -19,7 +19,7 @@ export function ShinyText({ text }: ShinyTextProps) {
       }}
       transition={{
         duration: 3,
-        ease: 'linear',
+        ease: 'linear' as const,
         repeat: Infinity,
       }}
       className="inline-block"
