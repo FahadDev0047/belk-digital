@@ -1,13 +1,15 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { cn } from '@/lib/utils';
-import { Award, Users, Globe, BarChart3, Shield, CheckCircle2 } from 'lucide-react';
+import { Award, Users, Globe, BarChart3, Shield, CheckCircle2, ArrowRight, ChevronRight, Projector as Project, Star, Zap, Monitor, Smartphone, Layout } from 'lucide-react';
 import { CTASection } from '@/components/home/CTASection';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Work = () => {
-    const { t, isRTL } = useLanguage();
+    const { language, t, isRTL } = useLanguage();
 
     const stats = [
         { value: '50+', label: t.hero.stats.projects, icon: Award },
@@ -16,113 +18,173 @@ const Work = () => {
         { value: '98%', label: t.trust.items[1].label, icon: BarChart3 },
     ];
 
-    return (
-        <>
-            {/* Hero Section */}
-            <section className="pt-32 pb-16 bg-gradient-to-br from-muted/50 via-background to-background">
-                <div className="container-wide">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className={cn("max-w-4xl text-center mx-auto", isRTL && "text-right")}
-                    >
-                        <span className="badge-accent mb-4 inline-block">{t.work.badge}</span>
-                        <h1 className="text-display mb-6 text-4xl md:text-5xl lg:text-6xl">
-                            {t.work.title}{' '}
-                            <span className="hero-text-gradient">{t.work.titleHighlight}</span>
-                        </h1>
-                        <p className="text-subtitle text-xl md:text-2xl text-muted-foreground">
-                            {t.work.subtitle}
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
+    const caseStudyImages = [
+        '/images/projects/project1.webp',
+        '/images/projects/project2.webp',
+        '/images/projects/project3.webp',
+    ];
 
-            {/* Stats Section */}
-            <section className="section-padding pt-0">
-                <div className="container-wide">
-                    {t.work.statsTitle && (
-                        <h2 className="text-3xl font-display font-bold text-center mb-10">{t.work.statsTitle}</h2>
-                    )}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                        {stats.map((stat, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="bg-card rounded-2xl p-8 border border-border text-center hover:border-primary/20 transition-colors"
-                            >
-                                <stat.icon className="w-10 h-10 text-accent-warm mx-auto mb-4" />
-                                <div className="text-4xl font-display font-bold mb-2">{stat.value}</div>
-                                <div className="text-muted-foreground">{stat.label}</div>
-                            </motion.div>
-                        ))}
+    return (
+        <div className="bg-[#0A0A0A] min-h-screen text-white">
+            {/* Hero Section */}
+            <section className="relative pt-44 pb-32 overflow-hidden min-h-[80vh] flex flex-col justify-end">
+                {/* Background Image & Overlays */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/hero/about-bg.webp"
+                        alt="Hero Background"
+                        fill
+                        className="object-cover opacity-40"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A] z-10" />
+                    <div className="absolute inset-0 bg-black/40 z-10" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_20%,rgba(59,130,246,0.12),transparent)] z-10" />
+                </div>
+
+                <div className="container-wide relative z-20">
+                    <div className="max-w-[1200px] mx-auto text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="mb-8"
+                        >
+                            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-white/60 text-xs font-sans font-medium tracking-widest uppercase">
+                                {t.work.badge}
+                            </span>
+                        </motion.div>
+
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-5xl md:text-7xl lg:text-8xl font-sans font-[600] tracking-tight leading-[1.1] mb-12 text-white"
+                        >
+                            {t.work.title}{' '}
+                            <span className="font-serif italic font-normal text-white/90">
+                                {t.work.titleHighlight}
+                            </span>
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed font-sans mb-16"
+                        >
+                            {t.work.subtitle}
+                        </motion.p>
+
+                        {/* Glassy Stats row */}
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                            {stats.map((stat, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: 0.4 + index * 0.1 }}
+                                    className="bg-white/[0.03] backdrop-blur-md rounded-[32px] p-8 border border-white/5 hover:border-white/10 transition-all group"
+                                >
+                                    <stat.icon className="w-10 h-10 text-white/40 mb-6 mx-auto group-hover:scale-110 group-hover:text-white transition-all" />
+                                    <div className="text-4xl md:text-5xl font-sans font-bold mb-2 tracking-tight text-white">{stat.value}</div>
+                                    <div className="text-[11px] text-white/40 uppercase tracking-[0.2em] font-medium">{stat.label}</div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Featured Case Studies (New Section) */}
-            <section className="section-padding bg-muted/30">
-                <div className="container-wide">
+            {/* Featured Case Studies */}
+            <section className="py-32 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+                <div className="container-wide relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className={cn("text-center max-w-3xl mx-auto mb-16", isRTL && "text-right")}
+                        className={cn("text-center max-w-3xl mx-auto mb-24", isRTL && "text-right")}
                     >
-                        <h2 className="text-headline mb-4">{t.work.caseStudies?.title || 'Featured Case Studies'}</h2>
-                        {/* Filter Labels */}
-                        <div className="flex flex-wrap justify-center gap-2 mt-6">
+                        <span className="text-xs font-bold tracking-[0.5em] uppercase text-white/40 mb-6 block">
+                           Showcase
+                        </span>
+                        <h2 className="text-4xl md:text-6xl font-sans font-[600] text-white">
+                           {t.work.caseStudies?.title || 'Featured Projects'}
+                        </h2>
+                        
+                        <div className="flex flex-wrap justify-center gap-3 mt-12">
                             {(t.work.caseStudies?.filters || []).map((filter: string, index: number) => (
-                                <span key={index} className="px-4 py-2 rounded-full bg-background border border-border text-sm font-medium text-muted-foreground">
+                                <span key={index} className="px-6 py-2 rounded-full bg-white/5 border border-white/5 text-xs font-bold uppercase tracking-widest text-white/40 hover:bg-white/10 hover:text-white transition-all cursor-default">
                                     {filter}
                                 </span>
                             ))}
                         </div>
                     </motion.div>
 
-                    {/* Placeholder Grid for Case Studies */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((item) => (
-                            <div key={item} className="bg-card rounded-xl overflow-hidden border border-border group cursor-pointer hover:shadow-lg transition-all">
-                                <div className="h-48 bg-muted w-full relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </div>
-                                <div className="p-6">
-                                    <div className="text-xs font-semibold text-accent-warm mb-2 uppercase tracking-wide">
-                                        Case Study
+                    {/* Premium Project Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {[1, 2, 3].map((item, index) => (
+                            <motion.div
+                                key={item}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="group relative bg-white/[0.02] border border-white/5 rounded-[40px] overflow-hidden hover:border-white/15 transition-all duration-700"
+                            >
+                                <div className="aspect-[4/5] relative overflow-hidden">
+                                     {/* Placeholder image layer */}
+                                    <div className="absolute inset-0 bg-[#1A1A1A] group-hover:scale-110 transition-transform duration-1000 ease-out" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10" />
+                                    
+                                    <div className="absolute inset-0 flex items-center justify-center z-10 opacity-40 group-hover:opacity-80 transition-opacity">
+                                         <Project className="w-16 h-16 text-white" />
                                     </div>
-                                    <h3 className="text-xl font-bold mb-2">Global Digital Project</h3>
-                                    <p className="text-muted-foreground text-sm">
-                                        Delivering measurable growth and outcome-based results for a global partner.
-                                    </p>
+
+                                    {/* Overlay Content */}
+                                    <div className="absolute bottom-10 left-10 right-10 z-20">
+                                         <span className="text-[10px] font-black tracking-[0.3em] uppercase text-white/40 mb-3 block">
+                                             Client Excellence
+                                         </span>
+                                         <h3 className="text-2xl font-sans font-[600] text-white mb-4 line-clamp-2">
+                                             Transforming Digital Realities for Global Leaders
+                                         </h3>
+                                         <p className="text-white/50 text-sm line-clamp-2 mb-8 group-hover:text-white/80 transition-colors">
+                                             A comprehensive redesign and strategic development phase resulting in 200% growth.
+                                         </p>
+                                         <div className="flex items-center gap-4">
+                                              <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-500">
+                                                  <ChevronRight className={cn("w-5 h-5", isRTL && "rotate-180")} />
+                                              </div>
+                                              <span className="text-xs font-bold uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">View Case Study</span>
+                                         </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* Methodology Section */}
-            <section className="section-padding">
+            <section className="py-32 relative overflow-hidden bg-white/[0.02]">
                 <div className="container-wide">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className={cn("text-center max-w-3xl mx-auto mb-16", isRTL && "text-right")}
+                        className={cn("text-center max-w-3xl mx-auto mb-24", isRTL && "text-right")}
                     >
-                        <span className="badge-accent mb-4 inline-block">{t.work.methodologyBadge}</span>
-                        <h2 className="text-headline mb-4">{t.work.methodologyTitle}</h2>
-                        <p className="text-subtitle">
+                        <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/40 text-[10px] font-black tracking-widest uppercase mb-8">
+                             {t.work.methodologyBadge}
+                        </span>
+                        <h2 className="text-4xl md:text-6xl font-sans font-[600] text-white mb-8">{t.work.methodologyTitle}</h2>
+                        <p className="text-xl text-white/50 font-sans">
                             {t.work.methodologySubtitle}
                         </p>
                     </motion.div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-8 max-w-5xl mx-auto">
                         {t.work.methodology.map((item: { title: string, description: string }, index: number) => (
                             <motion.div
                                 key={index}
@@ -131,16 +193,18 @@ const Work = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 className={cn(
-                                    "flex gap-6 items-start bg-card rounded-2xl p-6 border border-border hover:border-primary/20 transition-colors",
+                                    "relative flex gap-8 items-center bg-white/[0.03] backdrop-blur-md rounded-[40px] p-8 md:p-12 border border-white/5 hover:border-white/15 transition-all duration-500 group overflow-hidden",
                                     isRTL && "flex-row-reverse text-right"
                                 )}
                             >
-                                <div className="w-12 h-12 rounded-xl bg-accent-warm/10 flex items-center justify-center flex-shrink-0">
-                                    <span className="text-accent-warm font-bold">{String(index + 1).padStart(2, '0')}</span>
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 blur-[80px] -mr-32 -mt-32 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
+                                
+                                <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-black transition-all duration-500 relative z-10">
+                                    <span className="text-3xl font-black">{String(index + 1).padStart(2, '0')}</span>
                                 </div>
-                                <div>
-                                    <h3 className="text-xl font-display font-semibold mb-2">{item.title}</h3>
-                                    <p className="text-body">{item.description}</p>
+                                <div className="relative z-10">
+                                    <h3 className="text-2xl font-sans font-[600] mb-4 text-white group-hover:translate-x-2 transition-transform duration-300">{item.title}</h3>
+                                    <p className="text-white/50 text-lg leading-relaxed font-sans">{item.description}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -149,22 +213,24 @@ const Work = () => {
             </section>
 
             {/* Industries Section */}
-            <section className="section-padding bg-muted/30">
-                <div className="container-wide">
+            <section className="py-32 bg-black relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
+                <div className="container-wide relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className={cn("text-center max-w-3xl mx-auto mb-16", isRTL && "text-right")}
+                        className={cn("text-center max-w-3xl mx-auto mb-24", isRTL && "text-right")}
                     >
-                        <span className="badge-accent mb-4 inline-block">{t.work.industriesBadge}</span>
-                        <h2 className="text-headline mb-4">{t.work.industriesTitle}</h2>
-                        <p className="text-subtitle">
-                            {t.work.industriesSubtitle}
-                        </p>
+                         <span className="text-xs font-bold tracking-[0.5em] uppercase text-white/40 mb-6 block">
+                             Versatility
+                         </span>
+                        <h2 className="text-4xl md:text-6xl font-sans font-[600] text-white">
+                             {t.work.industriesTitle}
+                        </h2>
                     </motion.div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
                         {t.work.industries.map((industry: string, index: number) => (
                             <motion.div
                                 key={index}
@@ -173,12 +239,13 @@ const Work = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.05 }}
                                 className={cn(
-                                    "flex items-center gap-3 bg-card rounded-xl p-4 border border-border hover:shadow-sm transition-shadow",
+                                    "group relative flex items-center gap-4 bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-5 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-300 cursor-default overflow-hidden",
                                     isRTL && "flex-row-reverse"
                                 )}
                             >
-                                <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0" />
-                                <span className="font-medium text-sm">{industry}</span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <CheckCircle2 className="w-5 h-5 text-white/40 group-hover:text-white transition-colors relative z-10" />
+                                <span className="font-sans font-medium text-white/60 group-hover:text-white transition-colors relative z-10">{industry}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -186,64 +253,98 @@ const Work = () => {
             </section>
 
             {/* Trust Statement */}
-            <section className="section-padding hero-gradient text-primary-foreground">
-                <div className="container-wide">
+            <section className="py-40 relative overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/hero/service-detail-bg.webp"
+                        alt="Trust Background"
+                        fill
+                        className="object-cover opacity-20"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-[#0A0A0A] z-10" />
+                </div>
+
+                <div className="container-wide relative z-20">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center max-w-3xl mx-auto"
+                        className="text-center max-w-4xl mx-auto"
                     >
-                        <Shield className="w-16 h-16 mx-auto mb-6 opacity-80" />
-                        <h2 className="text-headline mb-6">{t.work.trust.title}</h2>
-                        {/* Micro Proof Line */}
+                        <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-12 group hover:scale-110 transition-transform duration-500">
+                             <Shield className="w-10 h-10 text-white/40 group-hover:text-white transition-colors" />
+                        </div>
+                        
+                        <h2 className="text-4xl md:text-7xl font-sans font-[600] text-white mb-10 tracking-tight">
+                            {t.work.trust.title}
+                        </h2>
+
                         {t.work.trust.subtitle && (
-                            <p className="text-lg text-primary-foreground/90 mb-4 font-medium italic">
+                            <p className="text-2xl md:text-3xl text-white/50 mb-12 font-serif italic italic leading-relaxed">
                                 "&quot;{t.work.trust.subtitle}&quot;"
                             </p>
                         )}
-                        <p className="text-xl text-primary-foreground/80 mb-8">
+
+                        <p className="text-lg md:text-xl text-white/40 mb-16 max-w-3xl mx-auto font-sans">
                             {t.work.trust.body}
                         </p>
-                        <div className="flex flex-wrap justify-center gap-6 text-sm text-primary-foreground/60">
+
+                        <div className="flex flex-wrap justify-center gap-8">
                             {t.work.trust.items.map((item: string, index: number) => (
-                                <span key={index}>✓ {item}</span>
+                                <div key={index} className="flex items-center gap-3">
+                                     <Star className="w-4 h-4 text-white/40" />
+                                     <span className="text-xs font-bold uppercase tracking-widest text-white/40">{item}</span>
+                                </div>
                             ))}
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Why Clients Choose Us Again (New Section) */}
+            {/* Why Clients Choose Us Again */}
             {t.work.whyAgain && (
-                <section className="section-padding">
+                <section className="py-32 relative overflow-hidden">
                     <div className="container-wide">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-center max-w-3xl mx-auto mb-16"
+                            className="text-center max-w-3xl mx-auto mb-24"
                         >
-                            <h2 className="text-headline mb-4">{t.work.whyAgain.title}</h2>
+                             <span className="text-xs font-bold tracking-[0.5em] uppercase text-white/40 mb-6 block">
+                                Outcomes
+                             </span>
+                            <h2 className="text-4xl md:text-6xl font-sans font-[600] text-white">
+                                {t.work.whyAgain.title}
+                            </h2>
                         </motion.div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                             {t.work.whyAgain.items.map((item: any, index: number) => (
-                                <div key={index} className={cn("p-6 rounded-xl bg-card border border-border flex flex-col gap-3", isRTL && "text-right")}>
-                                    <h3 className="text-xl font-bold text-accent-warm">{item.title}</h3>
-                                    <p className="text-muted-foreground">{item.description}</p>
-                                </div>
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className={cn(
+                                        "p-12 rounded-[40px] bg-white/[0.02] border border-white/5 hover:border-white/15 transition-all duration-500 group",
+                                        isRTL && "text-right"
+                                    )}
+                                >
+                                    <h3 className="text-2xl font-sans font-[600] text-white mb-6 group-hover:translate-x-2 transition-transform duration-300">{item.title}</h3>
+                                    <p className="text-white/50 text-lg leading-relaxed font-sans">{item.description}</p>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
                 </section>
             )}
 
-
             <CTASection
                 title={t.work.cta?.title || "Ready to Build Results Like These for Your Business?"}
                 subtitle={t.work.cta?.subtitle || "Let’s discuss how we can deliver measurable growth for your digital initiatives."}
             />
-        </>
+        </div>
     );
 };
 

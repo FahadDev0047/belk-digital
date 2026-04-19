@@ -163,7 +163,7 @@ const Locations = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[2.8rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[6.5rem] font-sans font-[400] tracking-tight leading-[1.08] text-white text-center w-full max-w-5xl"
+              className="text-[2.8rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[6.5rem] font-sans font-[600] tracking-tight leading-[1.08] text-white text-center w-full max-w-5xl"
             >
               {(() => {
                 const words = content.title.split(' ');
@@ -606,17 +606,30 @@ const Locations = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 pb-20 pt-40 md:pt-44 flex flex-col items-center gap-8 text-center">
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 pb-20 pt-44 md:pt-48 flex flex-col items-center gap-10 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-sans font-[400] text-white mb-8 tracking-tight leading-[1.1]">
-              {t.locations.title}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-white/60 text-xs font-sans font-medium tracking-widest uppercase mb-10"
+            >
+              <GlobeIcon className="w-3.5 h-3.5" />
+              {t.locations.badge || "Global Presence"}
+            </motion.div>
+
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-sans font-[600] tracking-tight leading-[1.05] text-white mb-10">
+              {t.locations.title.split(' ').slice(0, -1).join(' ')}{' '}
+              <span className="font-serif italic font-normal text-white/90">
+                {t.locations.title.split(' ').at(-1)}
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+            
+            <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-sans mt-4">
               {t.locations.subtitle}
             </p>
           </motion.div>
