@@ -16,7 +16,9 @@ export function Layout({
       <main className="flex-1">
         {children}
       </main>
-      <Footer />
+      <div className="bg-black">
+        <Footer />
+      </div>
     </div>
   );
 }

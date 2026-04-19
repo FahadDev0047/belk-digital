@@ -791,6 +791,12 @@ footer: {
   description: 'Nous créons des expériences numériques exceptionnelles qui aident les entreprises à prospérer dans le monde moderne.',
   branding: 'Belk Digital',
   copyright: '© 2024 Belk Digital Industries. Tous droits réservés.',
+  contactTitle: 'Contactez-nous',
+  contactItems: {
+    email: 'hello@belk-digital.com',
+    phone: '+41 123 456 123',
+    location: 'Studio Numérique Mondial'
+  },
   columns: {
     pages: {
       title: 'Pages',
@@ -1335,10 +1341,10 @@ terms: {
     cardView: 'Voir',
     hint: 'Cliquez sur le projet pour voir les détails',
     items: [
-      { title: 'Automotive Motion', year: '2024', tags: ['Motion CGI', 'Stratégie', 'Design'], image: '/images/projects/automotive-motion.png' },
-      { title: 'Urban Architecture', year: '2024', tags: ['3D Viz', 'Identité Visuelle', 'Produit'], image: '/images/projects/urban-architecture.png' },
-      { title: 'Human Perspective', year: '2023', tags: ['Photographie', 'UI/UX', 'Art'], image: '/images/projects/human-perspective.png' },
-      { title: 'Brand Identity', year: '2024', tags: ['Branding', 'Print', 'Digital'], image: '/images/projects/brand-identity.png' }
+      { title: 'Lumina', year: '2024', tags: ['Motion CGI', 'Stratégie', 'Design'], image: '/images/projects/lumina.png' },
+      { title: 'Zenith', year: '2024', tags: ['3D Viz', 'Identité Visuelle', 'Produit'], image: '/images/projects/zenith.png' },
+      { title: '99PurityPeptides', year: '2023', tags: ['Photographie', 'UI/UX', 'Art'], image: '/images/projects/project-image-1.png' },
+      { title: 'FilmFluence', year: '2024', tags: ['Branding', 'Print', 'Digital'], image: '/images/projects/project-image-2.png' }
     ]
   },
   homeJournal: {

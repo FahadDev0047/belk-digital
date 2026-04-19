@@ -85,7 +85,7 @@ export function CenterTracingBeam({ children, nodes, className }: CenterTracingB
 
   return (
     <motion.div ref={ref} className={cn("relative w-full", className)}>
-      
+
       {/* ================= DESKTOP SVG (Centered) ================= */}
       <div className="absolute inset-0 pointer-events-none z-10 hidden md:block">
         <svg
@@ -114,10 +114,10 @@ export function CenterTracingBeam({ children, nodes, className }: CenterTracingB
 
           <defs>
             <motion.linearGradient id="centerGradient" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1={y1} y2={y2}>
-              <stop stopColor="#60A5FA" stopOpacity="0" />
-              <stop offset="0.1" stopColor="#3B82F6" />
-              <stop offset="0.5" stopColor="#2563EB" />
-              <stop offset="1" stopColor="#1E3A8A" stopOpacity="0" />
+              <stop stopColor="#18CCFC" stopOpacity="0" />
+              <stop offset="0.1" stopColor="#18CCFC" />
+              <stop offset="0.5" stopColor="#18CCFC" />
+              <stop offset="1" stopColor="#18CCFC" stopOpacity="0" />
             </motion.linearGradient>
           </defs>
         </svg>
@@ -151,10 +151,10 @@ export function CenterTracingBeam({ children, nodes, className }: CenterTracingB
 
           <defs>
             <motion.linearGradient id="mobileGradient" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1={y1} y2={y2}>
-              <stop stopColor="#60A5FA" stopOpacity="0" />
-              <stop offset="0.1" stopColor="#3B82F6" />
-              <stop offset="0.5" stopColor="#2563EB" />
-              <stop offset="1" stopColor="#1E3A8A" stopOpacity="0" />
+              <stop stopColor="#18CCFC" stopOpacity="0" />
+              <stop offset="0.1" stopColor="#18CCFC" />
+              <stop offset="0.5" stopColor="#18CCFC" />
+              <stop offset="1" stopColor="#18CCFC" stopOpacity="0" />
             </motion.linearGradient>
           </defs>
         </svg>

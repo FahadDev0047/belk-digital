@@ -11,96 +11,73 @@ export function FAQSection() {
   const faqs = t.faq.items || [];
 
   return (
-    <section className="py-20 bg-[#000] dark:bg-[#1a1b1e]">
-      <div className="container-wide">
-        <div className="relative overflow-hidden bg-[#0D0D0D] dark:bg-[#1a1b1e] rounded-[40px] px-8 py-16 lg:px-16 lg:py-24">
+    <section className="py-24 md:py-32 bg-black transition-colors duration-300">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-24">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight"
+          >
+            {t.faq.title}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto"
+          >
+            {t.faq.subtitle || "We are here to help you with any questions you may have. If you don't find what you need, please contact us at "}
+            <a href="mailto:support@example.com" className="text-white hover:underline transition-all">support@example.com</a>
+          </motion.p>
+        </div>
 
-          {/* Background FAQ Watermark */}
-          <div className="pointer-events-none absolute top-[50%] left-[5%] -translate-y-[50%] select-none z-0">
-            <span className="text-[180px] sm:text-[250px] lg:text-[400px] font-bold text-blue-600/20 dark:text-white/[0.03] leading-none tracking-tighter hover:text-white transition-colors duration-300">
-              FAQ
-            </span>
-          </div>
-
-          <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left Side */}
+        {/* FAQ Accordion */}
+        <div className="max-w-4xl mx-auto space-y-4">
+          {faqs.map((faq: any, index: number) => (
             <motion.div
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#2d3342] dark:text-white mb-4">
-                {t.faq.title}
-              </h2>
-              <p className="text-[#647084] dark:text-gray-400 text-lg mb-12">
-                {t.faq.subtitle}
-              </p>
+              <div className={`bg-[#0c0c0c] border border-white/[0.05] rounded-2xl transition-all duration-300 ${openIndex === index ? 'bg-[#111]' : 'hover:bg-[#111]'}`}>
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full px-6 py-6 md:px-8 md:py-8 flex items-center gap-6 text-left focus:outline-none"
+                >
+                  <div className={`flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                    <ChevronDown className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
+                  </div>
+                  <span className={`text-lg md:text-xl font-bold transition-colors ${openIndex === index ? 'text-white' : 'text-gray-300 group-hover:text-white'}`}>
+                    {faq.question}
+                  </span>
+                </button>
 
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/60 dark:bg-black/20 shadow-sm rounded-full flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
-                    <Phone className="w-5 h-5 text-[#2d3342] dark:text-white" />
-                  </div>
-                  <span className="text-[#2d3342] dark:text-gray-200 font-medium">+41 123 456 123</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/60 dark:bg-black/20 shadow-sm rounded-full flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
-                    <Mail className="w-5 h-5 text-[#2d3342] dark:text-white" />
-                  </div>
-                  <span className="text-[#2d3342] dark:text-gray-200 font-medium">chris@fusioo.design</span>
-                </div>
+                <AnimatePresence initial={false}>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-8 md:px-8 md:pb-10 pl-[72px] md:pl-[80px] text-gray-400 text-lg leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
-
-            {/* Right Side */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-4"
-            >
-              {faqs.slice(0, 4).map((faq: any, index: number) => (
-                <div
-                  key={index}
-                  className="bg-[#FEFCFF] dark:bg-[#25262b] rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-all duration-300"
-                >
-                  <button
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full px-6 py-6 flex items-start justify-between gap-4 text-left"
-                  >
-                    <div className="flex gap-6 items-start pr-4">
-                      <span className="text-[#9ca3af] font-medium text-lg pt-0.5">
-                        {(index + 1).toString().padStart(2, '0')}
-                      </span>
-                      <span className={`font-semibold text-lg transition-colors ${openIndex === index ? 'text-[#2d3342] dark:text-white' : 'text-[#4b5563] dark:text-gray-300'} hover:text-[#2d3342] dark:hover:text-white`}>
-                        {faq.question}
-                      </span>
-                    </div>
-                    <ChevronDown
-                      className={`w-5 h-5 mt-1 flex-shrink-0 text-[#9ca3af] transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
-                    />
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {openIndex === index && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-6 pb-6 pt-0 ml-[46px] text-[#647084] dark:text-gray-400 leading-relaxed text-base">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </motion.div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,58 +1,97 @@
 "use client";
 import Link from 'next/link';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import {
+  Mail,
+  Phone,
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Globe,
+} from "lucide-react";
+import { FooterBackgroundGradient, TextHoverEffect } from "@/components/ui/hover-footer";
 
 export function Footer() {
-  const { language, t, isRTL } = useLanguage();
-
+  const { language, t } = useLanguage();
   const footerData = t.footer;
 
-  // We map the dictionary keys to ensure we follow the structure we added
-  const columns = [
-    { ...footerData.columns.pages, key: 'pages' },
-    { ...footerData.columns.socials, key: 'socials' },
-    { ...footerData.columns.legal, key: 'legal' },
-    { ...footerData.columns.register, key: 'register' },
+  const navLinks = [
+    { href: '/about', label: t.nav.about },
+    { href: '/services', label: t.nav.services },
+    { href: '/work', label: t.nav.work },
+    { href: '/locations', label: t.nav.locations },
+    { href: '/blog', label: t.nav.blog },
   ];
 
+  // Footer link data mapping from dictionary
+  const footerColumns = [
+    {
+      title: footerData.columns.pages.title,
+      links: navLinks,
+    },
+    {
+      title: footerData.columns.socials.title,
+      links: footerData.columns.socials.links,
+    },
+  ];
+
+  // Contact info data from dictionary
+  const contactInfo = [
+    {
+      icon: <Mail size={18} className="text-[#3ca2fa]" />,
+      text: footerData.contactItems.email,
+      href: `mailto:${footerData.contactItems.email}`,
+    },
+    {
+      icon: <Phone size={18} className="text-[#3ca2fa]" />,
+      text: footerData.contactItems.phone,
+      href: `tel:${footerData.contactItems.phone.replace(/\s/g, '')}`,
+    },
+    {
+      icon: <Globe size={18} className="text-[#3ca2fa]" />,
+      text: footerData.contactItems.location,
+    },
+  ];
+
+  // Social media icon mapping
+  const getSocialIcon = (label: string) => {
+    switch (label.toLowerCase()) {
+      case 'facebook': return <Facebook size={20} />;
+      case 'instagram': return <Instagram size={20} />;
+      case 'twitter': return <Twitter size={20} />;
+      case 'linkedin': return <Linkedin size={20} />;
+      default: return <Globe size={20} />;
+    }
+  };
+
   return (
-    <footer className="bg-[#030303] text-white pt-24 pb-12 overflow-hidden">
-      <div className="container-wide">
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-32 relative z-10">
-          
-          {/* Brand/Logo Column */}
-          <div className="lg:col-span-1">
-            <Link href={`/${language}`} className="flex items-center gap-3 mb-8 group">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center overflow-hidden transition-transform group-hover:scale-110">
-                <img src="/logo.png" alt="Belk Digital" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-xl font-bold tracking-tight uppercase">Belk Digital</span>
+    <footer className="bg-black relative h-fit rounded-[40px] overflow-hidden m-4 md:m-8 border border-white/[0.05]">
+      <div className="max-w-7xl mx-auto p-10 md:p-14 z-40 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
+          {/* Brand section */}
+          <div className="flex flex-col space-y-6">
+            <Link href={`/${language}`} className="flex items-center space-x-3 group">
+              <img src="/logo.png" alt={footerData.branding} className="h-12 w-auto transition-transform group-hover:scale-110" />
+
             </Link>
-            
-            <p className="text-white/40 text-sm max-w-xs mb-8 leading-relaxed">
+            <p className="text-sm text-white/50 leading-relaxed max-w-xs">
               {footerData.description}
             </p>
-
-            <div className="text-xs text-white/30 font-medium uppercase tracking-widest pt-4 border-t border-white/5 inline-block">
-              {footerData.copyright}
-            </div>
           </div>
 
-          {/* Link Columns */}
-          {columns.map((column) => (
-            <div key={column.key} className="flex flex-col">
-              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-8 opacity-90">
-                {column.title}
+          {/* Footer link sections */}
+          {footerColumns.map((section) => (
+            <div key={section.title}>
+              <h4 className="text-white text-base font-bold uppercase tracking-[0.2em] mb-8 opacity-80">
+                {section.title}
               </h4>
               <ul className="space-y-4">
-                {column.links.map((link: any) => (
+                {section.links.map((link: any) => (
                   <li key={link.label}>
-                    <Link 
+                    <Link
                       href={link.href.startsWith('http') ? link.href : `/${language}${link.href}`}
-                      className="text-white/50 hover:text-white transition-all duration-300 text-[0.95rem] inline-block hover:translate-x-1"
+                      className="text-white/40 hover:text-[#3ca2fa] transition-colors text-[0.95rem]"
                       target={link.href.startsWith('http') ? "_blank" : undefined}
                       rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
                     >
@@ -63,34 +102,67 @@ export function Footer() {
               </ul>
             </div>
           ))}
+
+          {/* Contact section */}
+          <div>
+            <h4 className="text-white text-base font-bold uppercase tracking-[0.2em] mb-8 opacity-80">
+              {footerData.contactTitle}
+            </h4>
+            <ul className="space-y-5">
+              {contactInfo.map((item, i) => (
+                <li key={i} className="flex items-center space-x-3 text-white/40">
+                  {item.icon}
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      className="hover:text-[#3ca2fa] transition-colors"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <span className="hover:text-[#3ca2fa] transition-colors">
+                      {item.text}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Huge Watermark */}
-        <div className="mt-12 relative flex justify-center items-center pointer-events-none select-none">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full"
-          >
-            <h2 className="text-[17vw] leading-none font-black tracking-tighter text-center uppercase whitespace-nowrap"
-                style={{ 
-                  color: 'transparent',
-                  WebkitTextStroke: '1px rgba(255,255,255,0.03)',
-                  textShadow: '0 0 30px rgba(255,255,255,0.01)'
-                }}>
-              Belk Digital
-            </h2>
-          </motion.div>
-        </div>
+        <hr className="border-t border-white/[0.05] my-8" />
 
-        {/* Mobile Sub-Footer */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 lg:hidden">
-           <p className="text-white/20 text-[10px] uppercase tracking-widest text-center">
-             &copy; {new Date().getFullYear()} Belk Digital Industries
-           </p>
+        {/* Footer bottom */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-6 md:space-y-0 text-white/30">
+          {/* Social icons */}
+          <div className="flex space-x-6">
+            {footerData.columns.socials.links.map((link: any) => (
+              <a
+                key={link.label}
+                href={link.href}
+                aria-label={link.label}
+                className="hover:text-[#3ca2fa] transition-all transform hover:scale-125"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {getSocialIcon(link.label)}
+              </a>
+            ))}
+          </div>
+
+          {/* Copyright */}
+          <p className="text-center md:text-left font-medium uppercase tracking-widest text-[10px]">
+            {footerData.copyright}
+          </p>
         </div>
       </div>
+
+      {/* Text hover effect - Expansive layout */}
+      <div className="lg:flex hidden h-[22rem] md:h-[30rem] -mt-40 md:-mt-52 -mb-28 md:-mb-36 overflow-hidden">
+        <TextHoverEffect text="BELK DIGITAL" className="z-50" />
+      </div>
+
+      <FooterBackgroundGradient />
     </footer>
   );
 }

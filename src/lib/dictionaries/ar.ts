@@ -1067,6 +1067,12 @@ const translations = {
     description: 'نحن نصنع تجارب رقمية استثنائية تساعد الشركات على الازدهار في العالم الحديث.',
     branding: 'Belk Digital',
     copyright: '© 2024 Belk Digital Industries. جميع الحقوق محفوظة.',
+    contactTitle: 'اتصل بنا',
+    contactItems: {
+      email: 'hello@belk-digital.com',
+      phone: '+41 123 456 123',
+      location: 'استوديو رقمي عالمي'
+    },
     columns: {
       pages: {
         title: 'صفحات',
@@ -1339,10 +1345,10 @@ const translations = {
     cardView: 'عرض',
     hint: 'انقر على المشروع لعرض التفاصيل',
     items: [
-      { title: 'Automotive Motion', year: '2024', tags: ['موشن جرافيك', 'استراتيجية', 'تصميم'], image: '/images/projects/automotive-motion.png' },
-      { title: 'Urban Architecture', year: '2024', tags: ['تصور ثلاثي الأبعاد', 'هوية بصرية', 'منتج'], image: '/images/projects/urban-architecture.png' },
-      { title: 'Human Perspective', year: '2023', tags: ['تصوير فوتوغرافي', 'تجربة المستخدم', 'فن'], image: '/images/projects/human-perspective.png' },
-      { title: 'Brand Identity', year: '2024', tags: ['علامة تجارية', 'طباعة', 'رقمي'], image: '/images/projects/brand-identity.png' }
+      { title: 'لومينا', year: '2024', tags: ['موشن جرافيك', 'استراتيجية', 'تصميم'], image: '/images/projects/lumina.png' },
+      { title: 'زينيث', year: '2024', tags: ['تصور ثلاثي الأبعاد', 'هوية بصرية', 'منتج'], image: '/images/projects/zenith.png' },
+      { title: '99PurityPeptides', year: '2023', tags: ['تصوير فوتوغرافي', 'تجربة المستخدم', 'فن'], image: '/images/projects/project-image-1.png' },
+      { title: 'FilmFluence', year: '2024', tags: ['علامة تجارية', 'طباعة', 'رقمي'], image: '/images/projects/project-image-2.png' }
     ]
   },
   homeJournal: {

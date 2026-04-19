@@ -50,8 +50,8 @@ export function LiquidMetalButton({
   }, [viewMode]);
 
   // Handle color variables
-  const whiteColor = "#ffffff";
-  const blueColor = "#3d7dff";
+  const whiteColor = "#000";
+  const blueColor = "#fff";
 
   useEffect(() => {
     const styleId = "shader-canvas-style-exploded";
@@ -248,7 +248,7 @@ export function LiquidMetalButton({
                 height: `${dimensions.innerHeight}px`,
                 margin: "2px",
                 borderRadius: "100px",
-                background: `linear-gradient(180deg, ${blueColor} 0%, #2563eb 100%)`,
+                background: `linear-gradient(180deg, ${blueColor})`,
                 boxShadow: isPressed
                   ? "inset 0px 2px 4px rgba(0, 0, 0, 0.4), inset 0px 1px 2px rgba(0, 0, 0, 0.3)"
                   : "none",

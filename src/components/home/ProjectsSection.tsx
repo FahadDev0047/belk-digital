@@ -38,23 +38,23 @@ export function ProjectsSection() {
                 >
                     <div className="max-w-2xl">
                         <div className="flex items-center gap-4 mb-6">
-                            <div className="w-8 h-px bg-stroke" />
-                            <span className="text-xs text-muted uppercase tracking-[0.3em] font-medium">{t.homeProjects.badge}</span>
+                            <div className="w-8 h-px bg-white/20" />
+                            <span className="text-xs text-white/40 uppercase tracking-[0.3em] font-medium">{t.homeProjects.badge}</span>
                         </div>
-                        <h2 className="text-5xl md:text-7xl font-sans font-bold tracking-tight text-text-primary mb-6">
+                        <h2 className="text-5xl md:text-7xl font-sans font-bold tracking-tight text-white mb-6">
                             {t.homeProjects.titlePart1} <span className="font-serif italic font-normal">{t.homeProjects.titlePart2}</span>
                         </h2>
-                        <p className="text-muted text-lg max-w-lg">
+                        <p className="text-white/60 text-lg max-w-lg">
                             {t.homeProjects.subtitle}
                         </p>
                     </div>
                     
                     <Link 
                         href={`/${language}/work`}
-                        className="hidden md:inline-flex items-center gap-3 px-10 py-5 rounded-full border border-stroke text-sm font-semibold text-text-primary hover:border-transparent transition-all relative group overflow-hidden"
+                        className="hidden md:inline-flex items-center gap-3 px-10 py-5 rounded-full border border-white/10 text-sm font-semibold text-white hover:border-transparent transition-all relative group overflow-hidden"
                     >
                         <div className="absolute inset-0 p-[1px] opacity-0 group-hover:opacity-100 transition-opacity accent-gradient -z-10" />
-                        <div className="absolute inset-[1px] rounded-full bg-bg -z-10" />
+                        <div className="absolute inset-[1px] rounded-full bg-black -z-10" />
                         
                         {t.homeProjects.explore}
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -79,7 +79,7 @@ export function ProjectsSection() {
 }
 
 function ProjectCard({ project, span, aspect, index }: { project: any, span: string, aspect: string, index: number }) {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     return (
         <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -107,19 +107,22 @@ function ProjectCard({ project, span, aspect, index }: { project: any, span: str
             <div className="absolute inset-0 halftone-pattern opacity-20 mix-blend-multiply transition-opacity group-hover:opacity-5" />
 
             {/* Hover State: Glassmorphic Transition */}
-            <div className="absolute inset-0 bg-bg/60 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center p-6">
+            <Link 
+                href={`/${language}/work`}
+                className="absolute inset-0 bg-bg/60 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center p-6 z-20"
+            >
                 {/* Pill Label with Animated Border */}
                 <div className="relative p-[1px] rounded-full overflow-hidden scale-90 group-hover:scale-100 transition-transform duration-500">
                     {/* Rotating/Animated Border Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-gradient-shift accent-gradient -z-10" />
                     
-                    <div className="bg-white/95 backdrop-blur-md px-10 py-5 rounded-full flex items-center shadow-2xl">
-                        <span className="text-black text-sm font-semibold tracking-tight whitespace-nowrap">
+                    <div className="bg-black/80 backdrop-blur-md border border-white/10 px-10 py-5 rounded-full flex items-center shadow-2xl">
+                        <span className="text-white text-sm font-semibold tracking-tight whitespace-nowrap">
                             {t.homeProjects.cardView} — <span className="font-serif italic font-normal tracking-wide">{project.title}</span>
                         </span>
                     </div>
                 </div>
-            </div>
+            </Link>
         </motion.div>
     );
 }
