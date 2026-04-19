@@ -33,7 +33,7 @@ export function LocationsSection() {
   const locations = data.items.slice(0, 4);
 
   return (
-    <section className="bg-bg py-24 md:py-32 overflow-hidden relative">
+    <section className="bg-black py-24 md:py-32 overflow-hidden relative">
       {/* Background Accent Gradient */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] -z-10 rounded-full" />
 
@@ -49,23 +49,23 @@ export function LocationsSection() {
         >
           <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-8 h-px bg-stroke" />
-              <span className="text-xs text-muted uppercase tracking-[0.3em] font-medium">{data.badge}</span>
+              <div className="w-8 h-px bg-white/20" />
+              <span className="text-xs text-white/40 uppercase tracking-[0.3em] font-medium">{data.badge}</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-sans font-bold tracking-tight text-text-primary mb-6">
+            <h2 className="text-5xl md:text-7xl font-sans font-bold tracking-tight text-white mb-6">
               {data.titlePart1} <span className="font-serif italic font-normal">{data.titlePart2}</span>
             </h2>
-            <p className="text-muted text-lg max-w-lg">
+            <p className="text-white/60 text-lg max-w-lg">
               {data.subtitle}
             </p>
           </div>
 
           <Link
             href={`/${language}/locations`}
-            className="hidden md:inline-flex items-center gap-3 px-10 py-5 rounded-full border border-stroke text-sm font-semibold text-text-primary hover:border-transparent transition-all relative group overflow-hidden"
+            className="hidden md:inline-flex items-center gap-3 px-10 py-5 rounded-full border border-white/20 text-sm font-semibold text-white hover:border-white/40 transition-all relative group overflow-hidden"
           >
             <div className="absolute inset-0 p-[1px] opacity-0 group-hover:opacity-100 transition-opacity accent-gradient -z-10" />
-            <div className="absolute inset-[1px] rounded-full bg-bg -z-10" />
+            <div className="absolute inset-[1px] rounded-full bg-black -z-10" />
 
             {data.explore}
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -115,10 +115,18 @@ function LocationCard({ location, index, cardView, language }: { location: any, 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-      className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-[2.5rem] overflow-hidden aspect-[4/5] md:aspect-auto md:h-[420px] flex flex-col p-10 shadow-2xl transition-colors duration-500"
+      className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-[2.5rem] overflow-hidden flex flex-col p-10 shadow-2xl transition-all duration-500 group"
+      style={{ minHeight: '420px' }}
     >
-      {/* Halftone Overlay */}
-      <div className="absolute inset-0 halftone-pattern opacity-10 mix-blend-overlay pointer-events-none" />
+      {/* Halftone overlay */}
+      <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none"
+        style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '8px 8px' }}
+      />
+
+      {/* Hover glow */}
+      <div className="absolute inset-0 rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at 70% 30%, rgba(59,130,246,0.08), transparent 70%)' }}
+      />
 
       {/* Top Section: Flag & Live Time */}
       <div className="flex items-center justify-between mb-auto relative z-10">
@@ -131,34 +139,45 @@ function LocationCard({ location, index, cardView, language }: { location: any, 
           />
         </div>
 
-        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg/40 border border-stroke backdrop-blur-sm">
+        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 border border-white/10 backdrop-blur-sm">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
           </span>
-          <span className="text-[10px] font-bold tracking-widest text-text-primary/70 uppercase">
+          <span className="text-[10px] font-bold tracking-widest text-white/70 uppercase">
             {time}
           </span>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="mt-8 relative z-10">
-        <span className="text-[10px] font-black tracking-[0.4em] text-muted uppercase mb-4 block">
+      <div className="mt-8 relative z-10 flex-1 flex flex-col">
+        <span className="text-[10px] font-black tracking-[0.4em] text-white/30 uppercase mb-4 block">
           {location.code}
         </span>
-        <h3 className="text-3xl font-bold tracking-tight text-text-primary mb-4 transition-transform duration-500">
+        <h3 className="text-3xl font-bold tracking-tight text-white mb-4 group-hover:translate-x-1 transition-transform duration-500">
           {location.country}
         </h3>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-8">
           {location.cities.map((city: string, idx: number) => (
             <span
               key={idx}
-              className="px-3 py-1 rounded-full bg-bg/50 border border-stroke text-[10px] font-semibold text-muted transition-colors"
+              className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-semibold text-white/50"
             >
               {city}
             </span>
           ))}
+        </div>
+
+        {/* Visit Button inside card */}
+        <div className="mt-auto">
+          <Link
+            href={`/${language}/locations/${location.slug || ''}`}
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/15 text-sm font-semibold text-white/80 hover:border-white/40 hover:text-white hover:bg-white/5 transition-all duration-300 relative overflow-hidden group/btn"
+          >
+            {cardView}
+            <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+          </Link>
         </div>
       </div>
 

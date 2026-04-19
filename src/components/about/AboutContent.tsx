@@ -117,8 +117,106 @@ export function AboutContent() {
                 </motion.div>
             </section>
 
-            {/* Stats Section */}
-            {/* <StatsSection /> */}
+            {/* ─── Our Commitment Section ─── */}
+            <section className="py-28 bg-black relative overflow-hidden">
+                <div className="w-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 relative">
+
+                    {/* Curved dark background container */}
+                    <div
+                        className="absolute inset-0 z-0 pointer-events-none"
+                        style={{
+                            borderRadius: '50px',
+                            borderTop: '1px solid rgba(255,255,255,0.08)',
+                            background: 'linear-gradient(180deg, #0d0d0d 0%, #0a0a0a 70%, #000000 100%)',
+                        }}
+                    />
+                    {/* Bottom fade */}
+                    <div
+                        className="absolute inset-x-0 bottom-0 h-32 z-0 pointer-events-none"
+                        style={{
+                            borderBottomLeftRadius: '150px',
+                            borderBottomRightRadius: '150px',
+                            background: 'linear-gradient(to bottom, transparent, #000)',
+                        }}
+                    />
+                    {/* Ambient glow */}
+                    <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/[0.04] blur-[120px] rounded-full pointer-events-none z-0" />
+
+                    {/* Content */}
+                    <div className="relative z-10 py-16">
+                        <div className={cn(
+                            "flex flex-col lg:flex-row gap-16 lg:gap-24 items-start",
+                            isRTL && "lg:flex-row-reverse"
+                        )}>
+
+                            {/* Left — heading */}
+                            <motion.div
+                                initial={{ opacity: 0, x: isRTL ? 30 : -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                                className="lg:w-[45%] lg:sticky lg:top-32"
+                            >
+                                {/* Pill badge */}
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="w-8 h-px bg-white/20" />
+                                    <span className="text-xs text-white/40 uppercase tracking-[0.3em] font-medium">
+                                        Our Commitment
+                                    </span>
+                                </div>
+
+                                <h2 className={cn(
+                                    "text-[2.2rem] sm:text-[2.8rem] md:text-[3.5rem] font-sans font-[600] tracking-tight leading-[1.1] text-white",
+                                    isRTL && "text-right"
+                                )}>
+                                    {(() => {
+                                        const title = t.about.mission.title;
+                                        const words = title.split(' ');
+                                        const italic = words.slice(-2).join(' ');
+                                        const rest = words.slice(0, -2).join(' ');
+                                        return <>{rest}{' '}<span className="font-serif italic font-normal">{italic}</span></>;
+                                    })()}
+                                </h2>
+                            </motion.div>
+
+                            {/* Right — body */}
+                            <motion.div
+                                initial={{ opacity: 0, x: isRTL ? -30 : 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                                className="lg:w-[55%] flex flex-col gap-8 pt-2"
+                            >
+                                {/* Decorative accent line */}
+                                <div className="w-16 h-[2px] bg-gradient-to-r from-blue-400/60 to-purple-500/60 rounded-full" />
+
+                                <p className={cn(
+                                    "text-white/55 text-lg md:text-xl leading-relaxed font-sans",
+                                    isRTL && "text-right"
+                                )}>
+                                    {t.about.mission.body}
+                                </p>
+
+                                {/* Stats row */}
+                                <div className="flex flex-wrap gap-10 pt-4">
+                                    {[
+                                        { value: '50+', label: 'Projects Delivered' },
+                                        { value: '98%', label: 'Client Satisfaction' },
+                                        { value: '10+', label: 'Countries Served' },
+                                    ].map((stat, i) => (
+                                        <div key={i} className={cn("flex flex-col gap-1", isRTL && "items-end")}>
+                                            <span className="text-2xl md:text-3xl font-sans font-[700] text-white tracking-tight">{stat.value}</span>
+                                            <span className="text-[11px] text-white/35 uppercase tracking-widest font-medium">{stat.label}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             {/* What We Do Section */}
             <section className="section-padding bg-black relative py-32">

@@ -8,6 +8,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { languages } from '@/lib/i18n-config';
 import { useTheme } from "next-themes";
 import { cn } from '@/lib/utils';
+import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,14 +42,11 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { href: `/${language}`, label: t.nav.home },
     { href: `/${language}/about`, label: t.nav.about },
     { href: `/${language}/services`, label: t.nav.services },
     { href: `/${language}/work`, label: t.nav.work },
     { href: `/${language}/locations`, label: t.nav.locations },
     { href: `/${language}/blog`, label: t.nav.blog },
-    { href: `/${language}/faq`, label: t.nav.faq },
-    { href: `/${language}/contact`, label: t.nav.contact },
   ];
 
   const isActiveLink = (href: string) => {
@@ -100,10 +98,10 @@ export function Header() {
             <motion.img
               layout
               src="/logo.png"
-              alt="CodeNovaX"
+              alt="Belk Digital"
               className={cn(
                 "transition-all duration-300 block",
-                isScrolled ? "h-8" : "h-10"
+                isScrolled ? "h-14" : "h-20"
               )}
             />
           </Link>
@@ -192,33 +190,14 @@ export function Header() {
               </AnimatePresence>
             </div>
 
-            {/* Theme Toggle */}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className={cn(
-                "flex items-center justify-center w-9 h-9 rounded-full transition-colors hover:text-white hover:bg-white/10",
-                textColorFaded
-              )}
-            >
-              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </button>
+
 
             {/* CTA Button */}
             <Link
               href={`/${language}/contact`}
-              className={cn(
-                "flex items-center gap-2 relative transition-all duration-200",
-                "bg-[#cfff71]/80 backdrop-blur-md text-[rgb(1,2,2)] font-medium text-[14px] leading-[18px]",
-                "border border-white/40",
-                "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),0_2px_8px_rgba(0,0,0,0.1)]",
-                "hover:bg-white/30 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.4),0_4px_12px_rgba(0,0,0,0.15)]",
-                "px-4 py-1.5 rounded-full"
-              )}
+              className="pointer-events-auto"
             >
-              <motion.span layout>{t.nav.bookCall}</motion.span>
-              {isScrolled && <motion.span layout initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} className="text-xs"></motion.span>}
+              <LiquidMetalButton label="Contact" />
             </Link>
           </motion.div>
 
@@ -246,19 +225,7 @@ export function Header() {
           >
             {/* Top Right Actions */}
             <div className="absolute top-6 right-6 z-10 flex items-center gap-3">
-              {/* Theme Toggle */}
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ delay: 0.05 }}
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="relative p-3 rounded-full bg-foreground/10 backdrop-blur-sm text-foreground hover:bg-foreground/20 transition-colors shadow-lg"
-              >
-                <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute inset-0 m-auto h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                <span className="sr-only">Toggle theme</span>
-              </motion.button>
+
 
               {/* Close Button */}
               <motion.button
@@ -340,9 +307,8 @@ export function Header() {
                 <Link
                   href={`/${language}/contact`}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="btn-accent bg-white/20 backdrop-blur-md text-[rgb(1,2,2)] font-medium text-[14px] leading-[18px] border border-white/40 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),0_2px_8px_rgba(0,0,0,0.1)] px-4 py-1.5 rounded-full"
                 >
-                  {t.nav.bookCall}
+                  <LiquidMetalButton label="Contact" />
                 </Link>
               </motion.div>
             </motion.div>

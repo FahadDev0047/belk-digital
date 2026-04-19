@@ -26,7 +26,7 @@ export function Footer() {
           {/* Brand/Logo Column */}
           <div className="lg:col-span-1">
             <Link href={`/${language}`} className="flex items-center gap-3 mb-8 group">
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center overflow-hidden transition-transform group-hover:scale-110">
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center overflow-hidden transition-transform group-hover:scale-110">
                 <img src="/logo.png" alt="Belk Digital" className="w-full h-full object-cover" />
               </div>
               <span className="text-xl font-bold tracking-tight uppercase">Belk Digital</span>

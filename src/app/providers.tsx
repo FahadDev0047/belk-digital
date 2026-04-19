@@ -23,7 +23,7 @@ export function Providers({
     const [queryClient] = useState(() => new QueryClient());
 
     return (
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
             <QueryClientProvider client={queryClient}>
                 <LanguageProvider dictionary={dictionary} language={language} dir={dir}>
                     <TooltipProvider>

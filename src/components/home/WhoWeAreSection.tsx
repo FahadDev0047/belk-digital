@@ -18,7 +18,7 @@ function Word({ children, progress, range }: WordProps) {
     return (
         <span className="relative mx-[0.4em] inline-block">
             {/* Ghost Layer */}
-            <span className="absolute inset-0 opacity-20 select-none text-slate-500/30">
+            <span className="absolute inset-0 select-none text-white/10">
                 {children}
             </span>
             {/* Reveal Layer */}
@@ -62,21 +62,6 @@ export function WhoWeAreSection() {
             ref={containerRef}
             className="dark relative h-[200vh] bg-black transition-colors duration-500"
         >
-            {/* Top Fade Grid Background */}
-            <div
-                className="absolute inset-0 z-0 pointer-events-none"
-                style={{
-                    backgroundImage: `
-                        linear-gradient(to right, rgba(58, 123, 191, 0.15) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(58, 123, 191, 0.15) 1px, transparent 1px)
-                    `,
-                    backgroundSize: "40px 40px",
-                    WebkitMaskImage:
-                        "radial-gradient(ellipse 70% 60% at 50% 100%, #000 30%, transparent 100%)",
-                    maskImage:
-                        "radial-gradient(ellipse 70% 60% at 50% 100%, #000 30%, transparent 100%)",
-                }}
-            />
             <div className="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden w-full">
                 <div className="container-wide flex flex-col justify-center items-center h-full gap-8 md:gap-12">
 
@@ -93,7 +78,7 @@ export function WhoWeAreSection() {
                             </motion.span>
 
                             {/* Animated Description Reveal */}
-                            <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter leading-[1.2] lg:leading-[1.1]">
+                            <div className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-[500] tracking-tighter leading-[1.2] lg:leading-[1.1]">
                                 {descWords.map((word: string, i: number) => {
                                     const start = i / totalWords;
                                     const end = (i + 1) / totalWords;

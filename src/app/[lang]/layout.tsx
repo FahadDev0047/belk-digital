@@ -5,6 +5,7 @@ import { Providers } from "@/app/providers";
 import { Layout as AppLayout } from '@/components/layout/Layout';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { CustomScrollbar } from '@/components/ui/CustomScrollbar';
+import { Preloader } from '@/components/ui/Preloader';
 
 import Script from 'next/script';
 
@@ -40,6 +41,7 @@ export default async function Layout({
                 <JsonLd />
             </head>
             <body className="antialiased">
+                <Preloader />
                 <Providers dictionary={dict} language={lang as Locale} dir={dir}>
                     <SmoothScroll>
                         <CustomScrollbar />
