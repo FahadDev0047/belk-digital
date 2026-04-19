@@ -4,7 +4,7 @@ export function getHreflang(path: string = ''): {
     canonical: string;
     languages: Record<string, string>;
 } {
-    const baseUrl = 'https://codenovax.com';
+    const baseUrl = 'https://belkdigital.com';
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
 
     const languageAlternates: Record<string, string> = {};

@@ -57,7 +57,7 @@ export const faqDataEN: FAQCategory[] = [
         questions: [
             {
                 q: "Do you work with international clients?",
-                a: "Yes. CodeNovaX works with clients across the US, Europe, GCC, and Australia. Our remote-first model allows us to deliver high-quality digital solutions globally."
+                a: "Yes. Belk Digital works with clients across the US, Europe, GCC, and Australia. Our remote-first model allows us to deliver high-quality digital solutions globally."
             },
             {
                 q: "What languages do you support?",
@@ -221,18 +221,18 @@ export const faqDataEN: FAQCategory[] = [
         ]
     },
     {
-        name: "Why Choose CodeNovaX",
+        name: "Why Choose Belk Digital",
         questions: [
             {
-                q: "Why should we choose CodeNovaX over other agencies?",
-                a: "Clients choose CodeNovaX for our strategic thinking, technical expertise, transparency, and long-term mindset. We don’t just build websites—we build scalable digital foundations."
+                q: "Why should we choose Belk Digital over other agencies?",
+                a: "Clients choose Belk Digital for our strategic thinking, technical expertise, transparency, and long-term mindset. We don’t just build websites—we build scalable digital foundations."
             },
             {
-                q: "Is CodeNovaX a freelancer or an agency?",
-                a: "CodeNovaX is a full-service digital agency with a structured team covering strategy, design, development, SEO, and support."
+                q: "Is Belk Digital a freelancer or an agency?",
+                a: "Belk Digital is a full-service digital agency with a structured team covering strategy, design, development, SEO, and support."
             },
             {
-                q: "What makes CodeNovaX suitable for global clients?",
+                q: "What makes Belk Digital suitable for global clients?",
                 a: "Our remote-first delivery model, international experience, and process-driven execution make us well-suited for global collaborations across time zones."
             }
         ]
@@ -287,7 +287,7 @@ export const faqDataAR: FAQCategory[] = [
         questions: [
             {
                 q: "هل تعملون مع عملاء دوليين؟",
-                a: "نعم. تعمل CodeNovaX مع عملاء في الولايات المتحدة وأوروبا ودول مجلس التعاون الخليجي وأستراليا. يسمح نموذجنا عن بُعد بتقديم حلول رقمية عالية الجودة عالميًا."
+                a: "نعم. تعمل Belk Digital مع عملاء في الولايات المتحدة وأوروبا ودول مجلس التعاون الخليجي وأستراليا. يسمح نموذجنا عن بُعد بتقديم حلول رقمية عالية الجودة عالميًا."
             },
             {
                 q: "ما هي اللغات التي تدعمونها؟",
@@ -451,18 +451,18 @@ export const faqDataAR: FAQCategory[] = [
         ]
     },
     {
-        name: "لماذا تختار CodeNovaX",
+        name: "لماذا تختار Belk Digital",
         questions: [
             {
-                q: "لماذا يجب أن نختار CodeNovaX؟",
-                a: "يختار العملاء CodeNovaX لتفكيرنا الاستراتيجي وخبرتنا الفنية وشفافيتنا. نحن لا نبني مواقع ويب فقط—نحن نبني أسسًا رقمية قابلة للتوسع."
+                q: "لماذا يجب أن نختار Belk Digital؟",
+                a: "يختار العملاء Belk Digital لتفكيرنا الاستراتيجي وخبرتنا الفنية وشفافيتنا. نحن لا نبني مواقع ويب فقط—نحن نبني أسسًا رقمية قابلة للتوسع."
             },
             {
-                q: "هل CodeNovaX مستقل أم وكالة؟",
-                a: "CodeNovaX هي وكالة رقمية متكاملة الخدمات مع فريق منظم يغطي الاستراتيجية والتصميم والتطوير وتحسين محركات البحث."
+                q: "هل Belk Digital مستقل أم وكالة؟",
+                a: "Belk Digital هي وكالة رقمية متكاملة الخدمات مع فريق منظم يغطي الاستراتيجية والتصميم والتطوير وتحسين محركات البحث."
             },
             {
-                q: "ما الذي يجعل CodeNovaX مناسبة للعملاء العالميين؟",
+                q: "ما الذي يجعل Belk Digital مناسبة للعملاء العالميين؟",
                 a: "نموذج التسليم عن بُعد وخبرتنا الدولية وتنفيذنا القائم على العمليات يجعلنا مناسبين تمامًا للتعاون العالمي."
             }
         ]
@@ -517,7 +517,7 @@ export const faqDataFR: FAQCategory[] = [
         questions: [
             {
                 q: "Travaillez-vous avec des clients internationaux ?",
-                a: "Oui. CodeNovaX travaille avec des clients aux États-Unis, en Europe, dans le CCG et en Australie. Notre modèle à distance nous permet de livrer des solutions numériques de haute qualité à l'échelle mondiale."
+                a: "Oui. Belk Digital travaille avec des clients aux États-Unis, en Europe, dans le CCG et en Australie. Notre modèle à distance nous permet de livrer des solutions numériques de haute qualité à l'échelle mondiale."
             },
             {
                 q: "Quelles langues supportez-vous ?",
@@ -681,18 +681,18 @@ export const faqDataFR: FAQCategory[] = [
         ]
     },
     {
-        name: "Pourquoi CodeNovaX",
+        name: "Pourquoi Belk Digital",
         questions: [
             {
-                q: "Pourquoi choisir CodeNovaX ?",
+                q: "Pourquoi choisir Belk Digital ?",
                 a: "Les clients nous choisissent pour notre réflexion stratégique, notre expertise technique et notre transparence. Nous construisons des fondations numériques évolutives."
             },
             {
                 q: "Êtes-vous freelance ou agence ?",
-                a: "CodeNovaX est une agence numérique complète avec une équipe structurée couvrant la stratégie, le design, le développement et le SEO."
+                a: "Belk Digital est une agence numérique complète avec une équipe structurée couvrant la stratégie, le design, le développement et le SEO."
             },
             {
-                q: "Pourquoi CodeNovaX pour les clients mondiaux ?",
+                q: "Pourquoi Belk Digital pour les clients mondiaux ?",
                 a: "Notre modèle de livraison à distance et notre expérience internationale nous rendent parfaitement adaptés aux collaborations mondiales."
             }
         ]
@@ -747,7 +747,7 @@ export const faqDataDE: FAQCategory[] = [
         questions: [
             {
                 q: "Arbeiten Sie mit internationalen Kunden?",
-                a: "Ja. CodeNovaX arbeitet mit Kunden in den USA, Europa, GCC und Australien. Unser Remote-First-Modell ermöglicht globale digitale Lösungen."
+                a: "Ja. Belk Digital arbeitet mit Kunden in den USA, Europa, GCC und Australien. Unser Remote-First-Modell ermöglicht globale digitale Lösungen."
             },
             {
                 q: "Welche Sprachen unterstützen Sie?",
@@ -911,18 +911,18 @@ export const faqDataDE: FAQCategory[] = [
         ]
     },
     {
-        name: "Warum CodeNovaX",
+        name: "Warum Belk Digital",
         questions: [
             {
-                q: "Warum sollte man CodeNovaX wählen?",
+                q: "Warum sollte man Belk Digital wählen?",
                 a: "Kunden wählen uns wegen unseres strategischen Denkens, unserer technischen Expertise und Transparenz. Wir bauen skalierbare digitale digitale Grundlagen."
             },
             {
-                q: "Ist CodeNovaX Freelancer oder Agentur?",
-                a: "CodeNovaX ist eine Full-Service-Digitalagentur mit einem strukturierten Team für Strategie, Design, Entwicklung und SEO."
+                q: "Ist Belk Digital Freelancer oder Agentur?",
+                a: "Belk Digital ist eine Full-Service-Digitalagentur mit einem strukturierten Team für Strategie, Design, Entwicklung und SEO."
             },
             {
-                q: "Was macht CodeNovaX für globale Kunden geeignet?",
+                q: "Was macht Belk Digital für globale Kunden geeignet?",
                 a: "Unser Remote-First-Modell und internationale Erfahrung machen uns ideal für die globale Zusammenarbeit."
             }
         ]

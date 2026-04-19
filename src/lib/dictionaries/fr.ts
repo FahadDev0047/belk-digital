@@ -2,10 +2,10 @@ const translations = {
 seo: {
   home: {
     title: 'Agence de Transformation Numérique | Conception & Développement Web',
-    description: 'CodeNovaX fournit des sites web performants, des applications web sur mesure et des services SEO pour aider les entreprises à croître mondialement.'
+    description: 'Belk Digital fournit des sites web performants, des applications web sur mesure et des services SEO pour aider les entreprises à croître mondialement.'
   },
   about: {
-    title: 'À Propos de CodeNovaX | Agence Digitale Mondiale',
+    title: 'À Propos de Belk Digital | Agence Digitale Mondiale',
     description: 'Découvrez notre mission d\'autonomiser les entreprises grâce à la technologie. Nous sommes une équipe d\'experts dédiés à votre réussite numérique.'
   },
   services: {
@@ -71,7 +71,7 @@ hero: {
   },
 },
 whyChoose: {
-  badge: 'Pourquoi CodeNovaX',
+  badge: 'Pourquoi Belk Digital',
   title: 'Une Expertise de Confiance',
   subtitle: 'Nous combinons réflexion stratégique et excellence technique pour des résultats qui comptent.',
   features: [
@@ -133,7 +133,7 @@ services: {
   microScope: 'Design Web • Développement Web • SaaS • SEO • Marketing Digital • Support',
   common: {
     whoForTitle: 'À qui s\'adresse ce service',
-    whyChooseTitle: 'Pourquoi choisir CodeNovaX pour {service}',
+    whyChooseTitle: 'Pourquoi choisir Belk Digital pour {service}',
     processTitle: 'Notre processus pour livrer {service}',
     growthTitle: 'Comment ce service soutient la croissance à long terme',
     ctaTitle: 'Prêt à commencer avec {service} ?',
@@ -481,7 +481,7 @@ services: {
     ],
   },
   whyChoose: {
-    title: 'Pourquoi Choisir CodeNovaX pour les Services Numériques',
+    title: 'Pourquoi Choisir Belk Digital pour les Services Numériques',
     items: [
       { title: 'Livraison de Service Globale d\'Abord', description: 'Expérience de livraison sur les marchés US, Europe et CCG.' },
       { title: 'Stratégie Numérique Axée sur les Affaires', description: 'Nous nous concentrons sur les indicateurs qui comptent pour vos résultats.' },
@@ -557,7 +557,7 @@ locations: {
     button: 'Parlez à Notre Équipe Globale',
   },
   whyChoose: {
-    title: 'Pourquoi les Entreprises Globales Choisissent CodeNovaX',
+    title: 'Pourquoi les Entreprises Globales Choisissent Belk Digital',
     items: [
       { title: 'Expérience prouvée dans 45+ pays', description: 'Nous comprenons les paysages numériques mondiaux.' },
       { title: 'Livraison globale avec compréhension locale', description: 'Combler le fossé entre standards mondiaux et besoins locaux.' },
@@ -572,7 +572,7 @@ locations: {
   cityPages: {
     usa: {
       title: 'Société de Services Numériques aux États-Unis',
-      intro: 'CodeNovaX fournit des services de conception web, de développement web, de solutions SaaS, de SEO et de marketing numérique aux entreprises à travers les États-Unis. Nous aidons les entreprises à rivaliser, évoluer et croître dans l\'un des marchés numériques les plus compétitifs au monde.',
+      intro: 'Belk Digital fournit des services de conception web, de développement web, de solutions SaaS, de SEO et de marketing numérique aux entreprises à travers les États-Unis. Nous aidons les entreprises à rivaliser, évoluer et croître dans l\'un des marchés numériques les plus compétitifs au monde.',
       excellence: {
         title: 'Livrer l\'Excellence Numérique aux États-Unis',
         body: 'Les entreprises américaines exigent rapidité, performance et innovation. Nous construisons des solutions numériques qui répondent aux attentes des grandes entreprises tout en soutenant la croissance et la flexibilité à long terme.',
@@ -598,7 +598,7 @@ locations: {
         ],
       },
       whyChoose: {
-        title: 'Pourquoi les Entreprises Américaines Choisissent CodeNovaX',
+        title: 'Pourquoi les Entreprises Américaines Choisissent Belk Digital',
         items: [
           { title: 'Expérience de travail avec des entreprises mondiales et américaines', description: 'Nous comprenons le paysage du marché américain.' },
           { title: 'Développement axé sur la performance et le SEO', description: 'Construire pour la vitesse et la visibilité dès le premier jour.' },
@@ -612,12 +612,12 @@ locations: {
       },
       cta: {
         title: 'Prêt à Construire une Présence Numérique Haute Performance aux États-Unis ?',
-        subtitle: 'Discutons de la manière dont CodeNovaX peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
+        subtitle: 'Discutons de la manière dont Belk Digital peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
       },
     },
     europe: {
       title: 'Société de Services Numériques au Royaume-Uni et en Europe',
-      intro: 'CodeNovaX fournit des services de conception web personnalisée, de développement SaaS, de SEO et de marketing numérique aux entreprises à travers le Royaume-Uni et l\'Europe. Nous soutenons les organisations à la recherche de solutions numériques fiables, conformes et évolutives.',
+      intro: 'Belk Digital fournit des services de conception web personnalisée, de développement SaaS, de SEO et de marketing numérique aux entreprises à travers le Royaume-Uni et l\'Europe. Nous soutenons les organisations à la recherche de solutions numériques fiables, conformes et évolutives.',
       excellence: {
         title: 'Livrer l\'Excellence Numérique en Europe',
         body: 'Les entreprises européennes exigent un équilibre entre innovation, convivialité et sensibilisation réglementaire. Nos solutions sont construites avec la performance, l\'accessibilité et l\'évolutivité au cœur.',
@@ -643,7 +643,7 @@ locations: {
         ],
       },
       whyChoose: {
-        title: 'Pourquoi les Entreprises Européennes Choisissent CodeNovaX',
+        title: 'Pourquoi les Entreprises Européennes Choisissent Belk Digital',
         items: [
           { title: 'Livraison globale avec une exécution adaptée à la région', description: 'Adapté aux normes et réglementations européennes.' },
           { title: 'Pratiques de développement propres, évolutives et conformes', description: 'Focus sur les standards RGPD et l\'accessibilité.' },
@@ -657,12 +657,12 @@ locations: {
       },
       cta: {
         title: 'Prêt à Construire une Présence Numérique Haute Performance en Europe ?',
-        subtitle: 'Discutons de la manière dont CodeNovaX peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
+        subtitle: 'Discutons de la manière dont Belk Digital peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
       },
     },
     gcc: {
       title: 'Société de Services Numériques dans le CCG',
-      intro: 'CodeNovaX fournit des services de développement web, de solutions SaaS, de SEO et de marketing numérique aux entreprises à travers la région du CCG. Nous soutenons les entreprises à croissance rapide dans la construction de fondations numériques solides.',
+      intro: 'Belk Digital fournit des services de développement web, de solutions SaaS, de SEO et de marketing numérique aux entreprises à travers la région du CCG. Nous soutenons les entreprises à croissance rapide dans la construction de fondations numériques solides.',
       excellence: {
         title: 'Livrer l\'Excellence Numérique dans le CCG',
         body: 'Le marché du CCG évolue rapidement et est très compétitif. Nous aidons les entreprises à établir une forte présence numérique avec des plateformes évolutives, sécurisées et prêtes pour l\'avenir.',
@@ -688,7 +688,7 @@ locations: {
         ],
       },
       whyChoose: {
-        title: 'Pourquoi les Entreprises du CCG Choisissent CodeNovaX',
+        title: 'Pourquoi les Entreprises du CCG Choisissent Belk Digital',
         items: [
           { title: 'Expérience au service de divers marchés internationaux', description: 'Apporter la qualité mondiale aux projets locaux.' },
           { title: 'Stratégies numériques axées sur les affaires', description: 'Des solutions qui stimulent le ROI.' },
@@ -702,12 +702,12 @@ locations: {
       },
       cta: {
         title: 'Prêt à Construire une Présence Numérique Haute Performance dans le CCG ?',
-        subtitle: 'Discutons de la manière dont CodeNovaX peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
+        subtitle: 'Discutons de la manière dont Belk Digital peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
       },
     },
     australia: {
       title: 'Société de Services Numériques en Australie',
-      intro: 'CodeNovaX s\'associe aux entreprises australiennes pour fournir des solutions de conception web, de développement web, de SEO et de marketing numérique qui soutiennent une croissance durable et un succès à long terme.',
+      intro: 'Belk Digital s\'associe aux entreprises australiennes pour fournir des solutions de conception web, de développement web, de SEO et de marketing numérique qui soutiennent une croissance durable et un succès à long terme.',
       excellence: {
         title: 'Livrer l\'Excellence Numérique en Australie',
         body: 'Les entreprises australiennes apprécient la fiabilité, la performance et la clarté. Nos solutions numériques sont conçues pour fonctionner de manière cohérente tout en évoluant avec la croissance de l\'entreprise.',
@@ -733,7 +733,7 @@ locations: {
         ],
       },
       whyChoose: {
-        title: 'Pourquoi les Entreprises Australiennes Choisissent CodeNovaX',
+        title: 'Pourquoi les Entreprises Australiennes Choisissent Belk Digital',
         items: [
           { title: 'Expertise mondiale avec compréhension du marché local', description: 'Nous vous connectons aux meilleures pratiques mondiales.' },
           { title: 'Code propre, maintenable et évolutif', description: 'Construit pour durer et facile à maintenir.' },
@@ -747,7 +747,7 @@ locations: {
       },
       cta: {
         title: 'Prêt à Construire une Présence Numérique Haute Performance en Australie ?',
-        subtitle: 'Discutons de la manière dont CodeNovaX peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
+        subtitle: 'Discutons de la manière dont Belk Digital peut aider votre entreprise à croître avec des solutions numériques évolutives et prêtes pour l\'avenir.',
       },
     },
   }
@@ -856,7 +856,7 @@ about: {
   mission: {
     title: 'Orienté Croissance. Axé Performance. Construit pour le Long Terme.',
     subtitle: '',
-    body: 'Chez CodeNovaX, nous croyons que chaque entreprise mérite une présence numérique puissante et prête pour l\'avenir. Notre mission est de simplifier les défis numériques complexes grâce à une conception réfléchie, un développement évolutif et une exécution axée sur la performance. Nous collaborons avec des entreprises de tous secteurs pour construire des plateformes numériques qui soutiennent la croissance, améliorent la visibilité et créent de la valeur à long terme.',
+    body: 'Chez Belk Digital, nous croyons que chaque entreprise mérite une présence numérique puissante et prête pour l\'avenir. Notre mission est de simplifier les défis numériques complexes grâce à une conception réfléchie, un développement évolutif et une exécution axée sur la performance. Nous collaborons avec des entreprises de tous secteurs pour construire des plateformes numériques qui soutiennent la croissance, améliorent la visibilité et créent de la valeur à long terme.',
   },
   stats: {
     title: 'Notre impact mondial en chiffres',
@@ -868,7 +868,7 @@ about: {
     ]
   },
   whatWeDo: {
-    title: 'Ce que nous faisons chez CodeNovaX',
+    title: 'Ce que nous faisons chez Belk Digital',
     subtitle: 'Nous offrons des services numériques de bout en bout conçus pour aider les entreprises à rivaliser, évoluer et réussir dans un monde axé sur le numérique.',
     items: [
       { title: 'Design Web Personnalisé & UI/UX', description: 'Des designs uniques et alignés sur la marque qui engagent les utilisateurs, améliorent l\'utilisabilité et stimulent les conversions sur tous les appareils.' },
@@ -922,7 +922,7 @@ about: {
     ],
   },
   whyChoose: {
-    title: 'Pourquoi choisir CodeNovaX comme partenaire numérique',
+    title: 'Pourquoi choisir Belk Digital comme partenaire numérique',
     items: [
       { title: 'Stratégie Globale d\'Abord', description: 'Solutions conçues pour la portée internationale, l\'évolutivité et la performance inter-marchés.' },
       { title: 'Design & Développement Axés sur les Affaires', description: 'Chaque décision est guidée par les objectifs commerciaux, le ROI et les résultats mesurables.' },
@@ -1001,7 +1001,7 @@ work: {
     ],
   },
   whyAgain: {
-    title: 'Pourquoi les Clients Choisissent CodeNovaX Encore une Fois',
+    title: 'Pourquoi les Clients Choisissent Belk Digital Encore une Fois',
     items: [
       { title: 'Livraison constante sur des projets complexes', description: 'Nous livrons à temps et dans le budget, à chaque fois.' },
       { title: 'Communication claire & transparence', description: 'Pas de jargon, juste des mises à jour claires et des conseils honnêtes.' },
@@ -1016,7 +1016,7 @@ work: {
 },
 blog: {
   title: 'Insights, Stratégies & Ressources de Croissance Numérique',
-  subtitle: 'Restez informé des avis d\'experts, des stratégies et des meilleures pratiques en matière de conception web, de développement, de référencement, d\'optimisation des performances et de croissance numérique. Chez CodeNovaX, nous partageons nos connaissances pratiques pour aider les entreprises aux États-Unis, en Europe, dans le CCG et en Australie à prendre des décisions numériques éclairées.',
+  subtitle: 'Restez informé des avis d\'experts, des stratégies et des meilleures pratiques en matière de conception web, de développement, de référencement, d\'optimisation des performances et de croissance numérique. Chez Belk Digital, nous partageons nos connaissances pratiques pour aider les entreprises aux États-Unis, en Europe, dans le CCG et en Australie à prendre des décisions numériques éclairées.',
   badge: 'Notre Blog',
   readTime: 'lecture',
   backToBlog: 'Retour au Blog',
@@ -1160,7 +1160,7 @@ privacy: {
   badge: 'Politique de Confidentialité',
   title: 'Votre Vie Privée,',
   titleHighlight: 'Notre Priorité',
-  subtitle: 'Chez CodeNovaX, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos informations personnelles. Cette politique explique comment nous collectons, utilisons et protégeons vos données.',
+  subtitle: 'Chez Belk Digital, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos informations personnelles. Cette politique explique comment nous collectons, utilisons et protégeons vos données.',
   lastUpdated: 'Dernière mise à jour : 2 février 2026',
   effectiveDate: 'Date d\'entrée en vigueur : 1er janvier 2026',
   sections: {
@@ -1235,14 +1235,14 @@ terms: {
   badge: 'Conditions Générales',
   title: 'Conditions',
   titleHighlight: 'Générales',
-  subtitle: 'Veuillez lire attentivement ces conditions générales avant d\'utiliser les services de CodeNovaX. Ces conditions régissent votre utilisation de notre site web et de nos services.',
+  subtitle: 'Veuillez lire attentivement ces conditions générales avant d\'utiliser les services de Belk Digital. Ces conditions régissent votre utilisation de notre site web et de nos services.',
   lastUpdated: 'Dernière mise à jour : 2 février 2026',
   effectiveDate: 'Date d\'entrée en vigueur : 1er janvier 2026',
   sections: {
     acceptance: {
       title: 'Acceptation des Conditions',
       items: [
-        'En accédant et en utilisant les services de CodeNovaX, vous acceptez et acceptez d\'être lié par ces Conditions Générales',
+        'En accédant et en utilisant les services de Belk Digital, vous acceptez et acceptez d\'être lié par ces Conditions Générales',
         'Si vous n\'êtes pas d\'accord avec une partie de ces conditions, vous ne pouvez pas accéder à nos services',
         'Nous nous réservons le droit de mettre à jour ces conditions à tout moment sans préavis',
         'L\'utilisation continue de nos services après les modifications constitue une acceptation des conditions modifiées',
@@ -1252,7 +1252,7 @@ terms: {
     servicesUsage: {
       title: 'Services et Utilisation',
       items: [
-        'CodeNovaX fournit des services de développement web, de design et de marketing numérique',
+        'Belk Digital fournit des services de développement web, de design et de marketing numérique',
         'Les services sont fournis "tels quels" et "selon disponibilité"',
         'Nous nous réservons le droit de modifier, suspendre ou interrompre les services à tout moment',
         'Vous devez avoir au moins 18 ans pour utiliser nos services',
@@ -1262,11 +1262,11 @@ terms: {
     intellectualProperty: {
       title: 'Propriété Intellectuelle',
       items: [
-        'Tous les contenus, designs et matériels livrés appartiennent à CodeNovaX jusqu\'au paiement intégral',
+        'Tous les contenus, designs et matériels livrés appartiennent à Belk Digital jusqu\'au paiement intégral',
         'Lors du paiement intégral, les droits de propriété intellectuelle spécifiés sont transférés au client',
         'Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans autorisation',
         'Les marques déposées, logos et marques de service affichés sont la propriété de leurs propriétaires respectifs',
-        'CodeNovaX conserve le droit de présenter le travail terminé dans notre portfolio'
+        'Belk Digital conserve le droit de présenter le travail terminé dans notre portfolio'
       ]
     },
     payment: {
@@ -1292,11 +1292,11 @@ terms: {
     liability: {
       title: 'Limitation de Responsabilité',
       items: [
-        'CodeNovaX n\'est pas responsable des dommages indirects, accessoires ou consécutifs',
+        'Belk Digital n\'est pas responsable des dommages indirects, accessoires ou consécutifs',
         'Notre responsabilité est limitée au montant payé pour le service spécifique',
         'Nous ne sommes pas responsables du contenu, des services ou des produits de tiers',
         'Les interruptions de service dues à des problèmes techniques ou à un cas de force majeure ne constituent pas un motif de responsabilité',
-        'Vous acceptez d\'indemniser CodeNovaX contre les réclamations découlant de votre utilisation des services'
+        'Vous acceptez d\'indemniser Belk Digital contre les réclamations découlant de votre utilisation des services'
       ]
     },
     prohibited: {
@@ -1322,14 +1322,14 @@ terms: {
   },
   governing: {
     title: 'Loi Applicable',
-    description: 'Ces Conditions Générales sont régies et interprétées conformément aux lois de la juridiction dans laquelle CodeNovaX opère. Tout litige relatif à ces conditions sera soumis à la compétence exclusive des tribunaux de cette juridiction.',
+    description: 'Ces Conditions Générales sont régies et interprétées conformément aux lois de la juridiction dans laquelle Belk Digital opère. Tout litige relatif à ces conditions sera soumis à la compétence exclusive des tribunaux de cette juridiction.',
     description2: 'En utilisant nos services, vous reconnaissez avoir lu, compris et accepté d\'être lié par ces Conditions Générales. Si vous avez des questions, veuillez contacter notre équipe juridique.'
   }
 },
   whoWeAre: {
     badge: 'Qui sommes-nous ?',
     title: 'Nous sommes une entreprise mondiale de solutions numériques créant des sites web performants, des plateformes SaaS et des produits numériques évolutifs qui génèrent un véritable impact commercial.',
-    aboutBtn: 'À propos de CodeNovaX',
+    aboutBtn: 'À propos de Belk Digital',
     teamBtn: 'Rencontrez l\'équipe',
   },
   homeProjects: {

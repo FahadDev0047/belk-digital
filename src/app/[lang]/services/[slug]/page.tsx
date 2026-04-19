@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const service = dict.services?.items?.find((item: any) => item.slug === slug);
 
     // Fallback to generic services metadata if not found
-    const title = service ? `${service.title} - CodeNovaX` : dict.seo.services.title;
+    const title = service ? `${service.title} - Belk Digital` : dict.seo.services.title;
     const description = service ? service.description : dict.seo.services.description;
 
     return constructMetadata({

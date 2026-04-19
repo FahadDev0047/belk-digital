@@ -37,7 +37,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'In today’s competitive digital landscape, businesses no longer succeed with visually appealing websites alone. Sustainable growth demands SEO-first digital solutions.',
         image: seoFirstDigitalImg,
         category: 'seo',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-02-02',
         readTime: '6',
         content: {
@@ -95,7 +95,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'In today\'s digital-first economy, a website is no longer a static brochure. It is a core growth engine that influences brand perception, lead generation, conversions, and long-term scalability.',
         image: businessGrowthImg,
         category: 'business',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-02-01',
         readTime: '35',
         content: {
@@ -141,7 +141,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'Selecting a digital partner is one of the most important decisions a business can make. The right partner accelerates growth, while the wrong one creates delays, inefficiencies, and technical debt.',
         image: digitalPartnerImg,
         category: 'business',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-28',
         readTime: '51',
         content: {
@@ -187,7 +187,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'UI/UX design is not about aesthetics alone. It is a business discipline that directly impacts engagement, conversions, and customer loyalty.',
         image: uiUxConversionsImg,
         category: 'design',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-25',
         readTime: '35',
         content: {
@@ -218,7 +218,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'Trends should be evaluated through the lens of business impact, not popularity. Focus on what drives performance, usability, and scalability.',
         image: designTrendsImg,
         category: 'design',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-22',
         readTime: '41',
         content: {
@@ -249,7 +249,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'SEO is not a one-time activity. It is a long-term growth engine that compounds over time, delivering sustainable visibility and high-intent traffic.',
         image: seoStrategyImg,
         category: 'seo',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-20',
         readTime: '33',
         content: {
@@ -280,7 +280,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'SEO enables businesses to compete globally without relying entirely on paid channels. Strategic international SEO levels the playing field.',
         image: internationalSeoImg,
         category: 'seo',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-18',
         readTime: '35',
         content: {
@@ -311,7 +311,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'Performance is no longer a technical concern — it is a business metric. Fast websites convert better, rank higher, and retain users longer.',
         image: performanceRevenueImg,
         category: 'performance',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-15',
         readTime: '51',
         content: {
@@ -357,7 +357,7 @@ export const blogPostsEN: BlogPost[] = [
         excerpt: 'Core Web Vitals measure real-world user experience and influence rankings. Understanding and optimizing these metrics is essential for business success.',
         image: coreWebVitalsImg,
         category: 'performance',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-12',
         readTime: '35',
         content: {
@@ -406,7 +406,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'في المشهد الرقمي التنافسي اليوم، لا تنجح الشركات بمجرد مواقع ويب جذابة بصريًا. يتطلب النمو المستدام حلولاً رقمية تضع SEO في المقام الأول.',
         image: seoFirstDigitalImg,
         category: 'seo',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-02-02',
         readTime: '6',
         content: {
@@ -464,7 +464,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'في الاقتصاد الرقمي اليوم، لم يعد الموقع مجرد كتيب ثابت. إنه محرك نمو أساسي يؤثر على صورة العلامة التجارية، وتوليد العملاء المحتملين، والمبيعات، وقابلية التوسع على المدى الطويل.',
         image: businessGrowthImg,
         category: 'business',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-02-01',
         readTime: '8',
         content: {
@@ -495,7 +495,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'اختيار شريك رقمي هو أحد أهم القرارات التي يمكن للشركة اتخاذها. الشريك الصحيح يسرع النمو، بينما الخاطئ يخلق تأخيرات وديون تقنية.',
         image: digitalPartnerImg,
         category: 'business',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-01-28',
         readTime: '7',
         content: {
@@ -526,7 +526,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'تصميم UI/UX ليس مجرد جماليات. إنه تخصص تجاري يؤثر بشكل مباشر على التفاعل، التحويلات، وولاء العملاء.',
         image: uiUxConversionsImg,
         category: 'design',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-01-25',
         readTime: '8',
         content: {
@@ -552,7 +552,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'يجب تقييم الاتجاهات من خلال عدسة تأثير الأعمال. ركز على ما يحرك الأداء، قابلية الاستخدام، وقابلية التوسع.',
         image: designTrendsImg,
         category: 'design',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-01-22',
         readTime: '6',
         content: {
@@ -578,7 +578,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'SEO ليس نشاطاً لمرة واحدة. إنه محرك نمو طويل الأمد يتراكم بمرور الوقت، موفراً رؤية مستدامة وزيارات عالية الجودة.',
         image: seoStrategyImg,
         category: 'seo',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-01-20',
         readTime: '9',
         content: {
@@ -604,7 +604,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'يمكن SEO الشركات من المنافسة عالمياً دون الاعتماد كلياً على القنوات المدفوعة. SEO الدولي الاستراتيجي يساوي فرص المنافسة.',
         image: internationalSeoImg,
         category: 'seo',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-01-18',
         readTime: '8',
         content: {
@@ -625,7 +625,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'الأداء لم يعد مسألة تقنية — إنه مقياس تجاري. المواقع السريعة تحقق تحويلات أفضل، وتصنف أعلى، وتحتفظ بالمستخدمين لفترة أطول.',
         image: performanceRevenueImg,
         category: 'performance',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-01-15',
         readTime: '7',
         content: {
@@ -646,7 +646,7 @@ export const blogPostsAR: BlogPost[] = [
         excerpt: 'تقيس مؤشرات الويب الأساسية تجربة المستخدم الحقيقية وتؤثر على التصنيفات. فهم وتحسين هذه المقاييس ضروري لنجاح الأعمال.',
         image: coreWebVitalsImg,
         category: 'performance',
-        author: 'فريق CodeNovaX',
+        author: 'فريق Belk Digital',
         date: '2024-01-12',
         readTime: '8',
         content: {
@@ -670,7 +670,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Dans le paysage numérique concurrentiel d\'aujourd\'hui, les entreprises ne réussissent plus seulement avec des sites web visuellement attrayants. La croissance durable exige des solutions numériques SEO-First.',
         image: seoFirstDigitalImg,
         category: 'seo',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-02-02',
         readTime: '6',
         content: {
@@ -728,7 +728,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Dans l\'économie numérique actuelle, un site web n\'est plus une brochure statique. C\'est un moteur de croissance essentiel qui influence la perception de la marque et les conversions.',
         image: businessGrowthImg,
         category: 'business',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-02-01',
         readTime: '8',
         content: {
@@ -749,7 +749,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Choisir un partenaire numérique est une décision cruciale. Le bon partenaire accélère la croissance, tandis que le mauvais crée des retards.',
         image: digitalPartnerImg,
         category: 'business',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-01-28',
         readTime: '7',
         content: {
@@ -770,7 +770,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Le design UI/UX n\'est pas qu\'une question d\'esthétique. C\'est une discipline commerciale qui impacte directement l\'engagement et la fidélité.',
         image: uiUxConversionsImg,
         category: 'design',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-01-25',
         readTime: '8',
         content: {
@@ -791,7 +791,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Les tendances doivent être évaluées sous l\'angle de l\'impact commercial. Concentrez-vous sur ce qui stimule la performance et l\'utilisabilité.',
         image: designTrendsImg,
         category: 'design',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-01-22',
         readTime: '6',
         content: {
@@ -812,7 +812,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Le SEO n\'est pas une activité ponctuelle. C\'est un moteur de croissance qui s\'accumule avec le temps.',
         image: seoStrategyImg,
         category: 'seo',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-01-20',
         readTime: '9',
         content: {
@@ -833,7 +833,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Le SEO permet de rivaliser mondialement sans dépendre entièrement de la publicité payante.',
         image: internationalSeoImg,
         category: 'seo',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-01-18',
         readTime: '8',
         content: {
@@ -854,7 +854,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'La performance est une métrique commerciale. Les sites rapides convertissent mieux et se classent plus haut.',
         image: performanceRevenueImg,
         category: 'performance',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-01-15',
         readTime: '7',
         content: {
@@ -875,7 +875,7 @@ export const blogPostsFR: BlogPost[] = [
         excerpt: 'Les Core Web Vitals mesurent l\'expérience utilisateur réelle et influencent les classements.',
         image: coreWebVitalsImg,
         category: 'performance',
-        author: 'Équipe CodeNovaX',
+        author: 'Équipe Belk Digital',
         date: '2024-01-12',
         readTime: '8',
         content: {
@@ -899,7 +899,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'In der heutigen digitalen Landschaft reichen optisch ansprechende Websites nicht mehr aus. Nachhaltiges Wachstum erfordert SEO-First digitale Lösungen.',
         image: seoFirstDigitalImg,
         category: 'seo',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-02-02',
         readTime: '6',
         content: {
@@ -957,7 +957,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'In der heutigen digitalen Wirtschaft ist eine Website keine statische Broschüre mehr. Sie ist ein zentraler Wachstumsmotor.',
         image: businessGrowthImg,
         category: 'business',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-02-01',
         readTime: '8',
         content: {
@@ -978,7 +978,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'Die Wahl eines digitalen Partners ist entscheidend. Der richtige Partner beschleunigt das Wachstum.',
         image: digitalPartnerImg,
         category: 'business',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-28',
         readTime: '7',
         content: {
@@ -999,7 +999,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'UI/UX-Design ist nicht nur Ästhetik. Es ist eine Geschäftsdisziplin, die Engagement und Loyalität direkt beeinflusst.',
         image: uiUxConversionsImg,
         category: 'design',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-25',
         readTime: '8',
         content: {
@@ -1020,7 +1020,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'Trends sollten nach ihrem geschäftlichen Einfluss bewertet werden. Fokus auf Leistung und Benutzerfreundlichkeit.',
         image: designTrendsImg,
         category: 'design',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-22',
         readTime: '6',
         content: {
@@ -1041,7 +1041,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'SEO ist keine einmalige Aktivität. Es ist ein langfristiger Wachstumsmotor, der sich über die Zeit aufbaut.',
         image: seoStrategyImg,
         category: 'seo',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-20',
         readTime: '9',
         content: {
@@ -1062,7 +1062,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'SEO ermöglicht es Unternehmen, global zu konkurrieren, ohne sich nur auf bezahlte Werbung zu verlassen.',
         image: internationalSeoImg,
         category: 'seo',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-18',
         readTime: '8',
         content: {
@@ -1083,7 +1083,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'Performance ist eine geschäftliche Kennzahl. Schnelle Websites konvertieren besser und ranken höher.',
         image: performanceRevenueImg,
         category: 'performance',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-15',
         readTime: '7',
         content: {
@@ -1104,7 +1104,7 @@ export const blogPostsDE: BlogPost[] = [
         excerpt: 'Core Web Vitals messen die echte Nutzererfahrung und beeinflussen Rankings.',
         image: coreWebVitalsImg,
         category: 'performance',
-        author: 'CodeNovaX Team',
+        author: 'Belk Digital Team',
         date: '2024-01-12',
         readTime: '8',
         content: {

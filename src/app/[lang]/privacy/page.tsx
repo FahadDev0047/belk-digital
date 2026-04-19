@@ -9,8 +9,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const dict = await getDictionary(lang as Locale);
 
     // Provide default string if translation key is missing in dict type
-    const title = (dict.seo as any).privacy?.title || `Privacy Policy - CodeNovaX`;
-    const description = (dict.seo as any).privacy?.description || `Learn how CodeNovaX protects and manages your personal information.`;
+    const title = (dict.seo as any).privacy?.title || `Privacy Policy - Belk Digital`;
+    const description = (dict.seo as any).privacy?.description || `Learn how Belk Digital protects and manages your personal information.`;
 
     return constructMetadata({
         title,

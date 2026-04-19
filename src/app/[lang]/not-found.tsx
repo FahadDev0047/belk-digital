@@ -2,7 +2,7 @@ import NotFound from '@/screens/NotFound';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: '404 - Page Not Found | CodeNovaX',
+    title: '404 - Page Not Found | Belk Digital',
     description: "The page you're looking for doesn't exist.",
 };
 

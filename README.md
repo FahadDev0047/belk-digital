@@ -1,10 +1,10 @@
-# CodeNovaX
+# Belk Digital
 
-Welcome to the CodeNovaX project.
+Welcome to the Belk Digital project.
 
 ## Project info
 
-**URL**: https://codenovax.com
+**URL**: https://belkdigital.com
 
 ## getting Started
 

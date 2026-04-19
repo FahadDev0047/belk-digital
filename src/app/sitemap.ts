@@ -3,7 +3,7 @@ import { getDictionary } from '@/lib/i18n';
 import { i18n, Locale } from '@/lib/i18n-config';
 import { blogPostsEN } from '@/i18n/blogPosts';
 
-const baseUrl = 'https://codenovax.com';
+const baseUrl = 'https://belkdigital.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const routes = [

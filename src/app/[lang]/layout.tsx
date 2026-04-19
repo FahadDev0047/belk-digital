@@ -12,7 +12,7 @@ import Script from 'next/script';
 
 
 export const metadata = {
-    title: "CodeNovaX",
+    title: "Belk Digital",
     description: "Digital Transformation Agency",
 };
 

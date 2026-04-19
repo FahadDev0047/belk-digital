@@ -2,11 +2,11 @@ export default function JsonLd() {
     const schema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        '@id': 'https://codenovax.com/#organization',
-        name: 'CodeNovaX',
-        url: 'https://codenovax.com',
-        logo: 'https://codenovax.com/logo.png',
-        email: 'business@codenovax.com',
+        '@id': 'https://belkdigital.com/#organization',
+        name: 'Belk Digital',
+        url: 'https://belkdigital.com',
+        logo: 'https://belkdigital.com/logo.png',
+        email: 'business@belkdigital.com',
         telephone: '+91 7759861053',
     }
 

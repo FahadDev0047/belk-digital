@@ -524,7 +524,7 @@ const Services = () => {
         </section>
       )}
 
-      {/* Why Choose CodeNovaX */}
+      {/* Why Choose Belk Digital */}
       {t.services.whyChoose && (
         <section className="py-32 bg-[#FEFCFF] dark:bg-[#05030b] relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-[#7548F0]/5 dark:bg-[#6633ff]/5 blur-[120px] rounded-full pointer-events-none" />
