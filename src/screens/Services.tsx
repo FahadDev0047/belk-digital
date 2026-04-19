@@ -524,49 +524,6 @@ const Services = () => {
         </section>
       )}
 
-      {/* Why Choose Belk Digital */}
-      {t.services.whyChoose && (
-        <section className="py-32 bg-[#FEFCFF] dark:bg-[#05030b] relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-[#7548F0]/5 dark:bg-[#6633ff]/5 blur-[120px] rounded-full pointer-events-none" />
-          <div className="container-wide relative z-10">
-            <h2 className={cn("text-5xl md:text-6xl font-display font-bold mb-20 text-center text-foreground dark:text-white")}>{t.services.whyChoose.title}</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-              {t.services.whyChoose.items.map((item: any, index: number) => (
-                <div key={index} className={cn("group p-8 border border-border dark:border-white/5 rounded-md bg-white dark:bg-white/[0.01] hover:bg-[#7548F0]/5 dark:hover:bg-white/[0.03] hover:border-[#7548F0]/20 dark:hover:border-white/10 transition-all duration-500 shadow-sm dark:shadow-none", isRTL && "text-right")}>
-                  <div className="w-16 h-16 rounded-sm bg-muted dark:bg-white/5 border border-border dark:border-white/10 flex items-center justify-center mb-6 text-foreground dark:text-white group-hover:bg-[#7548F0]/10 dark:group-hover:bg-[#cfff71]/10 group-hover:text-[#7548F0] dark:group-hover:text-[#cfff71] group-hover:border-[#7548F0]/30 dark:group-hover:border-[#cfff71]/30 transition-all duration-500">
-                    <Check className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-bold text-xl mb-3 text-foreground dark:text-white group-hover:translate-x-1 transition-transform duration-300">{item.title}</h3>
-                  <p className="text-muted-foreground dark:text-white/40 text-base leading-relaxed group-hover:text-foreground/60 dark:group-hover:text-white/60 transition-colors">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Process Listing Component */}
-      {t.services.process && (
-        <section className="py-24 bg-[#FEFCFF] dark:bg-[#0d0a1a] border-t border-border dark:border-white/5 relative overflow-hidden">
-          <div className="container-wide">
-            <h2 className={cn("text-4xl md:text-5xl font-display font-bold mb-20 text-center text-foreground dark:text-white")}>{t.services.process.title}</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {t.services.process.items.map((item: any, index: number) => (
-                <div key={index} className={cn("relative group p-8 rounded-md bg-white dark:bg-[#05030b] border border-border dark:border-white/5 hover:border-primary/20 dark:hover:border-white/20 transition-colors duration-500 shadow-sm dark:shadow-none", isRTL && "text-right")}>
-                  <div className="text-7xl font-display font-black text-black/5 dark:text-white/5 mb-6 absolute top-4 right-4 pointer-events-none group-hover:text-black/10 dark:group-hover:text-white/10 transition-colors duration-500">
-                    0{index + 1}
-                  </div>
-                  <div className="relative z-10 pt-4">
-                    <div className="text-3xl font-display font-bold text-[#7548F0] dark:text-[#cfff71] mb-6">0{index + 1}</div>
-                    <h3 className="font-bold text-xl text-foreground dark:text-white mb-3 group-hover:translate-x-1 transition-transform">{item.title}</h3>
-                    <p className="text-muted-foreground dark:text-white/40 leading-relaxed text-sm group-hover:text-foreground/70 dark:group-hover:text-white/60 transition-colors">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <CTASection
         title={t.services.cta?.title}
