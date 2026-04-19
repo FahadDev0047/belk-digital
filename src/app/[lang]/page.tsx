@@ -19,6 +19,7 @@ import { JournalSection } from '@/components/home/JournalSection';
 import { CTASection } from '@/components/home/CTASection';
 import { ProjectsSection } from '@/components/home/ProjectsSection';
 import { NumbersSection } from '@/components/home/NumbersSection';
+import { ValuesSection } from '@/components/home/ValuesSection';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
@@ -42,6 +43,7 @@ export default async function Page() {
 
             <ExpertiseSection />
             <TechMarquee />
+            <ValuesSection />
             <ProjectsSection />
             {/* <WhyChooseSection /> */}
             {/* <WhyWebsiteSection /> */}

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import ShinyText from '@/components/ui/ShinyText/ShinyText';
 
@@ -15,7 +16,7 @@ const brands = [
 ];
 
 export function HeroSection() {
-    const { t } = useLanguage();
+    const { language, t } = useLanguage();
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -104,9 +105,14 @@ export function HeroSection() {
 
                 {/* CTA Button */}
                 <div className="mt-8">
-                    <Button variant="heroSecondary" className="px-[29px] py-[24px]">
-                        {t.hero.ctaContact}
-                    </Button>
+                    <Link href={`/${language}/contact`}>
+                        <Button 
+                            variant="heroSecondary" 
+                            className="px-[29px] py-[24px] border border-white/20 hover:border-white/40 transition-all backdrop-blur-sm"
+                        >
+                            {t.hero.ctaContact}
+                        </Button>
+                    </Link>
                 </div>
             </div>
 

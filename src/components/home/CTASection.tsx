@@ -49,24 +49,24 @@ export function CTASection({ title, subtitle, button, buttonSecondary }: CTASect
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-medium text-white mb-8 tracking-tight font-sans">
               {title || t.cta.title}
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed font-sans font-medium text-opacity-80">
               {subtitle || "Let's discuss how we can help you achieve your digital goals and create an exceptional online presence."}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center font-sans font-medium">
               <Link
                 href={`/${language}/contact`}
-                className="group inline-flex items-center gap-2 bg-[#cfff71] text-black px-10 py-5 rounded-full font-bold text-lg hover:bg-[#b8e65f] transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(207,255,113,0.3)]"
+                className="group inline-flex items-center gap-2 bg-[#3ca2fa] text-white px-10 py-5 rounded-full text-lg hover:bg-[#2b8de0] transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(60,162,250,0.3)]"
               >
                 {button || t.cta.button}
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href={`/${language}/services`}
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white border-2 border-white/20 px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all border-white/30"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white border-2 border-white/20 px-10 py-5 rounded-full text-lg hover:bg-white/20 transition-all border-white/30"
               >
                 {buttonSecondary || t.hero.ctaSecondary}
                 <ArrowRight className="w-6 h-6" />
