@@ -11,8 +11,15 @@ export function FAQSection() {
   const faqs = t.faq.items || [];
 
   return (
-    <section className="py-24 md:py-32 bg-black transition-colors duration-300">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 md:py-32 bg-black transition-colors duration-300 overflow-hidden font-sans">
+      {/* Background Image */}
+      <img
+        src="/assets/liq.png"
+        alt="Liquid Background"
+        className="absolute bottom-0 left-1/2 w-[250%] md:w-[150%] lg:w-[120vw] opacity-30 pointer-events-none z-0 mix-blend-screen -translate-x-1/2 translate-y-[15%]"
+      />
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-24">
           <motion.h2
@@ -20,7 +27,7 @@ export function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight"
+            className="text-4xl md:text-6xl font-[500] text-white mb-6 tracking-tight"
           >
             {t.faq.title}
           </motion.h2>
@@ -47,7 +54,7 @@ export function FAQSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className={`bg-[#0c0c0c] border border-white/[0.05] rounded-2xl transition-all duration-300 ${openIndex === index ? 'bg-[#111]' : 'hover:bg-[#111]'}`}>
+              <div className={`backdrop-blur-lg border border-white/[0.08] rounded-2xl transition-all duration-300 ${openIndex === index ? 'bg-white/[0.05]' : 'bg-black/20 hover:bg-white/[0.03]'}`}>
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full px-6 py-6 md:px-8 md:py-8 flex items-center gap-6 text-left focus:outline-none"
@@ -55,7 +62,7 @@ export function FAQSection() {
                   <div className={`flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
                     <ChevronDown className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
                   </div>
-                  <span className={`text-lg md:text-xl font-bold transition-colors ${openIndex === index ? 'text-white' : 'text-gray-300 group-hover:text-white'}`}>
+                  <span className={`text-lg md:text-xl font-[500] transition-colors ${openIndex === index ? 'text-white' : 'text-gray-300 group-hover:text-white'}`}>
                     {faq.question}
                   </span>
                 </button>

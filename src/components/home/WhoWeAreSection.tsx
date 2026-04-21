@@ -63,7 +63,14 @@ export function WhoWeAreSection() {
             className="dark relative h-[200vh] bg-black transition-colors duration-500"
         >
             <div className="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden w-full">
-                <div className="container-wide flex flex-col justify-center items-center h-full gap-8 md:gap-12">
+                {/* Background Image */}
+                <img 
+                    src="/assets/liq.png" 
+                    alt="Liquid Background" 
+                    className="absolute bottom-0 right-0 w-[80%] md:w-[60%] max-w-[500px] opacity-30 pointer-events-none z-0 mix-blend-screen translate-x-[5%] translate-y-[10%]"
+                />
+                
+                <div className="container-wide flex flex-col justify-center items-center h-full gap-8 md:gap-12 relative z-10">
 
                     {/* Section Header */}
                     <div className="w-full flex justify-center">

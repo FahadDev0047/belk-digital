@@ -50,8 +50,8 @@ export default async function Page() {
             {/* <ProcessSection /> */}
             <LocationsSection />
             <NumbersSection />
-            <JournalSection />
             <FAQSection />
+            <JournalSection />
             <CTASection />
         </>
     );
