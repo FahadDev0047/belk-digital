@@ -794,8 +794,7 @@ footer: {
   contactTitle: 'Contactez-nous',
   contactItems: {
     email: 'contact@belkdigital.com',
-    phone: '+1 (843) 330-7365',
-    location: 'Studio Numérique Mondial'
+    phone: '+1 (843) 330-7365'
   },
   columns: {
     pages: {

@@ -48,10 +48,6 @@ export function Footer() {
       text: footerData.contactItems.phone,
       href: `tel:${footerData.contactItems.phone.replace(/\s/g, '')}`,
     },
-    {
-      icon: <Globe size={18} className="text-[#3ca2fa]" />,
-      text: footerData.contactItems.location,
-    },
   ];
 
   // Social media icon mapping
