@@ -9,6 +9,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import MuxPlayer from '@mux/mux-player-react';
 
+interface CaseStudy {
+    subtitle: string;
+    title: string;
+    videoId?: string;
+    image?: string;
+    client: string;
+    date: string;
+    categories: string;
+    services: string;
+    about: string;
+}
+
 const Work = () => {
     const { language, t, isRTL } = useLanguage();
 
@@ -24,7 +36,7 @@ const Work = () => {
         '/images/projects/project2.webp',
     ];
 
-    const featuredCaseStudies: any[] = [
+    const featuredCaseStudies: CaseStudy[] = [
         {
             subtitle: "99Purity Peptides",
             title: "Elevating Research with High-Purity Synthetic Peptides",
@@ -214,7 +226,7 @@ const Work = () => {
                                 <div className="max-w-4xl">
                                     <h4 className="text-2xl font-[600] text-white font-sans mb-6">About</h4>
                                     <div className="space-y-6">
-                                        {caseStudy.about.split('\n\n').map((paragraph, pIndex) => (
+                                        {caseStudy.about.split('\n\n').map((paragraph: string, pIndex: number) => (
                                             <p key={pIndex} className="text-white/70 text-lg leading-relaxed font-sans">
                                                 {paragraph}
                                             </p>
