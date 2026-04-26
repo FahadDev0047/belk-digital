@@ -31,7 +31,7 @@ export default async function Layout({
 }) {
     const { lang } = await params;
     const dict = await getDictionary(lang as Locale);
-    const dir = lang === 'ar' ? 'rtl' : 'ltr';
+    const dir = 'ltr'; // Hardcoded as ltr because all current languages (en, es, fr, de) are ltr
 
     return (
         <html lang={lang} dir={dir} suppressHydrationWarning>

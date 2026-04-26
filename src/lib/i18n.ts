@@ -4,7 +4,7 @@ import { i18n, Locale } from './i18n-config';
 // We enumerate all dictionaries here for better tree-shaking and static analysis
 const dictionaries = {
     en: () => import('./dictionaries/en').then((module) => module.default),
-    ar: () => import('./dictionaries/ar').then((module) => module.default),
+    es: () => import('./dictionaries/es').then((module) => module.default),
     fr: () => import('./dictionaries/fr').then((module) => module.default),
     de: () => import('./dictionaries/de').then((module) => module.default),
 };

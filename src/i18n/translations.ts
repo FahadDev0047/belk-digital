@@ -1334,7 +1334,7 @@ export const translations = {
       }
     },
   },
-  ar: {
+  es: {
     seo: {
       home: {
         title: 'وكالة التحول الرقمي | تصميم وتطوير المواقع',

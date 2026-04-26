@@ -74,18 +74,18 @@ export function WhoWeAreSection() {
 
                     {/* Section Header */}
                     <div className="w-full flex justify-center">
-                        <div className={cn("w-full max-w-6xl", isRTL && "text-right")}>
+                        <div className={cn("w-full max-w-6xl", isRTL ? "sm:text-right" : "")}>
                             <motion.span
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="text-xs font-semibold tracking-[0.5em] text-black/40 dark:text-white/30 uppercase mb-6 block"
+                                className="text-xs font-semibold tracking-[0.5em] text-black/40 dark:text-white/30 uppercase mb-6 block text-center sm:text-left"
                             >
                                 {headingText}
                             </motion.span>
 
                             {/* Animated Description Reveal */}
-                            <div className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-[500] tracking-tighter leading-[1.2] lg:leading-[1.1]">
+                            <div className="text-[28px] text-center sm:text-left sm:text-4xl md:text-5xl lg:text-6xl font-sans font-[500] tracking-tighter leading-[1.3] sm:leading-[1.2] lg:leading-[1.1]">
                                 {descWords.map((word: string, i: number) => {
                                     const start = i / totalWords;
                                     const end = (i + 1) / totalWords;

@@ -72,7 +72,7 @@ export function HeroSection() {
                 muted
                 playsInline
                 style={{ opacity: 0 }}
-                className="absolute inset-0 w-full h-full object-cover z-[0]"
+                className="absolute inset-0 w-full h-full object-contain sm:object-cover max-sm:object-[center_70%] z-[0]"
                 src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260308_114720_3dabeb9e-2c39-4907-b747-bc3544e2d5b7.mp4"
             />
 
@@ -86,7 +86,7 @@ export function HeroSection() {
             <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 text-center">
                 {/* Headline */}
                 <h1
-                    className="text-[120px] sm:text-[180px] md:text-[230px] font-normal leading-[1.02] tracking-[-0.024em] uppercase"
+                    className="text-[clamp(3.5rem,15vw,120px)] sm:text-[180px] md:text-[230px] font-normal leading-[1.02] tracking-[-0.024em] uppercase"
                 >
                     <ShinyText
                         text={t.hero.title}
@@ -106,8 +106,8 @@ export function HeroSection() {
                 {/* CTA Button */}
                 <div className="mt-8">
                     <Link href={`/${language}/contact`}>
-                        <Button 
-                            variant="heroSecondary" 
+                        <Button
+                            variant="heroSecondary"
                             className="px-[29px] py-[24px] border border-white/20 hover:border-white/40 transition-all backdrop-blur-sm"
                         >
                             {t.hero.ctaContact}
