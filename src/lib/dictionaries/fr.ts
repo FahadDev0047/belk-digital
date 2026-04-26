@@ -793,7 +793,7 @@ footer: {
   copyright: '© 2024 Belk Digital Industries. Tous droits réservés.',
   contactTitle: 'Contactez-nous',
   contactItems: {
-    email: 'hello@belk-digital.com',
+    email: 'contact@belkdigital.com',
     phone: '+41 123 456 123',
     location: 'Studio Numérique Mondial'
   },

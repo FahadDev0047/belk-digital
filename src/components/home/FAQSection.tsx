@@ -39,7 +39,7 @@ export function FAQSection() {
             className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto"
           >
             {t.faq.subtitle || "We are here to help you with any questions you may have. If you don't find what you need, please contact us at "}
-            <a href="mailto:support@example.com" className="text-white hover:underline transition-all">support@example.com</a>
+            <a href="mailto:contact@belkdigital.com" className="text-white hover:underline transition-all">contact@belkdigital.com</a>
           </motion.p>
         </div>
 

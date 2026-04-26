@@ -1066,7 +1066,7 @@ footer: {
     copyright: '© 2024 Belk Digital Industries. Alle Rechte vorbehalten.',
     contactTitle: 'Kontakt',
     contactItems: {
-      email: 'hello@belk-digital.com',
+      email: 'contact@belkdigital.com',
       phone: '+41 123 456 123',
       location: 'Globales Digitalstudio'
     },

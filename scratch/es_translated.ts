@@ -681,7 +681,7 @@ const translations = {
     copyright: '© 2024 Belk Digital Industries. Todos los derechos reservados.',
     contactTitle: 'Contáctenos',
     contactItems: {
-      email: 'contact@belkdigital.com',
+      email: 'hello@belk-digital.com',
       phone: '+41 123 456 123',
       location: 'Estudio Digital Global'
     },

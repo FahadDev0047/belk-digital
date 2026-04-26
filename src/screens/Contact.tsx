@@ -219,7 +219,7 @@ const Contact = () => {
                 {[
                   { icon: Mail, label: 'Email Us', value: 'contact@belkdigital.com', href: 'mailto:contact@belkdigital.com' },
                   { icon: MessageSquare, label: 'WhatsApp', value: '+91 7759861053', href: 'https://wa.me/917759861053' },
-                  { icon: Globe, label: 'Business Inquiry', value: 'business@belkdigital.com', href: 'mailto:business@belkdigital.com' }
+                  { icon: Globe, label: 'Business Inquiry', value: 'contact@belkdigital.com', href: 'mailto:contact@belkdigital.com' }
                 ].map((item, index) => (
                   <motion.a
                     key={index}
