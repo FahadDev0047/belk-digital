@@ -144,8 +144,7 @@ const Work = () => {
             <section className="py-32 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
                 <div className="container-wide relative z-10">
-                    <div className="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-16">
-                        <motion.div
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -168,7 +167,7 @@ const Work = () => {
                     </motion.div>
 
                     {/* Redesigned Single Case Study Layout */}
-                    <div className="flex flex-col gap-32">
+                    <div className="flex flex-col gap-32 max-w-7xl mx-auto">
                         {featuredCaseStudies.map((caseStudy, index) => (
                             <motion.div
                                 key={index}
@@ -238,8 +237,7 @@ const Work = () => {
                         ))}
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
             <CTASection
                 title={t.work.cta?.title || "Ready to Build Results Like These for Your Business?"}
