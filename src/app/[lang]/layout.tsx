@@ -14,6 +14,9 @@ import Script from 'next/script';
 export const metadata = {
     title: "Belk Digital",
     description: "Digital Transformation Agency",
+    icons: {
+        icon: '/favicon.png',
+    },
 };
 
 export async function generateStaticParams() {
