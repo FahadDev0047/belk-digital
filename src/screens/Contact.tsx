@@ -50,6 +50,12 @@ const Contact = () => {
   const onCaptchaResolved = async (token: string) => {
     try {
       setIsSubmitting(true);
+
+      // Check if EmailJS is configured
+      if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+        throw new Error("EmailJS is not properly configured. Please restart your dev server to load the new .env file.");
+      }
+
       const validated = contactSchema.parse(formData);
 
       const commonParams = {
@@ -95,11 +101,11 @@ const Contact = () => {
       setFormData({ name: '', email: '', website: '', service: '', message: '' });
       if (widgetIdRef.current !== null) grecaptcha.reset(widgetIdRef.current);
 
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      console.error('EmailJS Error:', error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again later.",
+        description: error?.text || error?.message || "Failed to send message. Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -144,6 +150,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      console.log('Submitting form...');
       contactSchema.parse(formData);
       if (widgetIdRef.current !== null) {
         grecaptcha.execute(widgetIdRef.current);
@@ -155,10 +162,17 @@ const Contact = () => {
         });
       }
     } catch (error) {
+      console.error('Submit Error:', error);
       if (error instanceof z.ZodError) {
         toast({
           title: "Validation Error",
           description: error.errors[0].message,
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "An unexpected error occurred. Please try again.",
           variant: "destructive",
         });
       }
