@@ -1063,11 +1063,11 @@ whoWeAre: {
 footer: {
     description: 'Wir schaffen außergewöhnliche digitale Erlebnisse, die Unternehmen helfen, in der modernen Welt erfolgreich zu sein.',
     branding: 'Belk Digital',
-    copyright: '© 2024 Belk Digital Industries. Alle Rechte vorbehalten.',
+    copyright: '© 2026 Belk Digital Industries. Alle Rechte vorbehalten.',
     contactTitle: 'Kontakt',
     contactItems: {
       email: 'contact@belkdigital.com',
-      phone: '+41 123 456 123',
+      phone: '+1 (843) 330-7365',
       location: 'Globales Digitalstudio'
     },
     columns: {

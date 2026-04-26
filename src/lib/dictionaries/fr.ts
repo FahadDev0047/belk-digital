@@ -790,11 +790,11 @@ faq: {
 footer: {
   description: 'Nous créons des expériences numériques exceptionnelles qui aident les entreprises à prospérer dans le monde moderne.',
   branding: 'Belk Digital',
-  copyright: '© 2024 Belk Digital Industries. Tous droits réservés.',
+  copyright: '© 2026 Belk Digital Industries. Tous droits réservés.',
   contactTitle: 'Contactez-nous',
   contactItems: {
     email: 'contact@belkdigital.com',
-    phone: '+41 123 456 123',
+    phone: '+1 (843) 330-7365',
     location: 'Studio Numérique Mondial'
   },
   columns: {

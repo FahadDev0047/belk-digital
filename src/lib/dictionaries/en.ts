@@ -862,11 +862,11 @@ const translations = {
   footer: {
     description: 'We craft exceptional digital experiences that help businesses thrive in the modern world.',
     branding: 'Belk Digital',
-    copyright: '© 2024 Belk Digital Industries. All rights reserved.',
+    copyright: '© 2026 Belk Digital Industries. All rights reserved.',
     contactTitle: 'Contact Us',
     contactItems: {
       email: 'contact@belkdigital.com',
-      phone: '+41 123 456 123',
+      phone: '+1 (843) 330-7365',
       location: 'Global Digital Studio'
     },
     columns: {

@@ -678,11 +678,11 @@ const translations = {
   footer: {
     description: 'Creamos experiencias digitales excepcionales que ayudan a las empresas a prosperar.',
     branding: 'Belk Digital',
-    copyright: '© 2024 Belk Digital Industries. Todos los derechos reservados.',
+    copyright: '© 2026 Belk Digital Industries. Todos los derechos reservados.',
     contactTitle: 'Contáctenos',
     contactItems: {
       email: 'contact@belkdigital.com',
-      phone: '+41 123 456 123',
+      phone: '+1 (843) 330-7365',
       location: 'Estudio Digital Global'
     },
     columns: {

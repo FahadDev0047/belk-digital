@@ -7,7 +7,7 @@ export default function JsonLd() {
         url: 'https://belkdigital.com',
         logo: 'https://belkdigital.com/logo.png',
         email: 'contact@belkdigital.com',
-        telephone: '+91 7759861053',
+        telephone: '+1 (843) 330-7365',
     }
 
     return (

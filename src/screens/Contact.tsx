@@ -232,7 +232,7 @@ const Contact = () => {
               <div className="grid gap-6">
                 {[
                   { icon: Mail, label: 'Email Us', value: 'contact@belkdigital.com', href: 'mailto:contact@belkdigital.com' },
-                  { icon: MessageSquare, label: 'WhatsApp', value: '+91 7759861053', href: 'https://wa.me/917759861053' },
+                  { icon: MessageSquare, label: 'WhatsApp', value: '+1 (843) 330-7365', href: 'https://wa.me/18433307365' },
                   { icon: Globe, label: 'Business Inquiry', value: 'contact@belkdigital.com', href: 'mailto:contact@belkdigital.com' }
                 ].map((item, index) => (
                   <motion.a
