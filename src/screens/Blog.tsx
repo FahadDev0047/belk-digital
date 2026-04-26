@@ -86,7 +86,7 @@ const Blog = () => {
                 </span>
                 <span className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  {new Date(post.date).toLocaleDateString(language === 'ar' ? 'ar-EG' : 'en-US', {
+                  {new Date(post.date).toLocaleDateString(language === 'es' ? 'es-ES' : 'en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
@@ -116,7 +116,7 @@ const Blog = () => {
                   </p>
 
                   <h2 className="text-3xl font-sans font-[600] text-white mt-16 mb-8">
-                    {language === 'ar' ? 'مقدمة' : (language === 'fr' ? 'Introduction' : (language === 'de' ? 'Einführung' : 'Introduction'))}
+                    {language === 'es' ? 'Introducción' : (language === 'fr' ? 'Introduction' : (language === 'de' ? 'Einführung' : 'Introduction'))}
                   </h2>
                   <p className="mb-12 text-lg text-white/70">{post.content.intro}</p>
 
@@ -139,7 +139,7 @@ const Blog = () => {
                   ))}
 
                   <h2 className="text-3xl font-sans font-[600] text-white mt-16 mb-8">
-                    {language === 'ar' ? 'خاتمة' : (language === 'fr' ? 'Conclusion' : (language === 'de' ? 'Fazit' : 'Conclusion'))}
+                    {language === 'es' ? 'Conclusión' : (language === 'fr' ? 'Conclusion' : (language === 'de' ? 'Fazit' : 'Conclusion'))}
                   </h2>
                   <p className="text-lg text-white/70">{post.content.conclusion}</p>
                 </div>
@@ -341,7 +341,7 @@ const Blog = () => {
                           {post.readTime} {t.blog.readTime}
                         </span>
                         <span className="w-1 h-1 rounded-full bg-white/20" />
-                        <span>{new Date(post.date).toLocaleDateString(language === 'ar' ? 'ar-EG' : 'en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                        <span>{new Date(post.date).toLocaleDateString(language === 'es' ? 'es-ES' : 'en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                       </div>
 
                       <h2 className={cn(

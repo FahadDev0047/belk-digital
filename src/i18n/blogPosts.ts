@@ -1199,8 +1199,8 @@ export const blogPostsDE: BlogPost[] = [
 // Helper function to get blog posts by language
 export const getBlogPosts = (language: string): BlogPost[] => {
     switch (language) {
-        case 'ar':
-            return blogPostsAR;
+        case 'es':
+            return blogPostsES;
         case 'fr':
             return blogPostsFR;
         case 'de':
